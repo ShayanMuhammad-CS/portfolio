@@ -11,17 +11,33 @@
 
 | Attribute | Current Value |
 | :--- | :--- |
-| **Current Build Version** | `v1.0.2` |
-| **Status** | 🟢 Healthy / Production Ready & Verified |
+| **Current Build Version** | `v1.0.3` |
+| **Status** | 🟢 Production Deployed & Verified Live (HTTP 200) |
 | **Last Updated** | 2026-10-22 |
 | **Primary Runtime** | Bun 1.4.0 (Windows Native) |
 | **Deployment Target** | Vercel Edge (`vercel.json`) |
-| **GitHub Repository** | `https://github.com/ShayanMuhammad-CS/portfolio` |
+| **Live Production URL** | [portfolio-five-tau-otr0exu0jk.vercel.app](https://portfolio-five-tau-otr0exu0jk.vercel.app) |
+| **Preview URL** | [portfolio-eelxsfugm-shayan24.vercel.app](https://portfolio-eelxsfugm-shayan24.vercel.app) |
+| **GitHub Repository** | [github.com/ShayanMuhammad-CS/portfolio](https://github.com/ShayanMuhammad-CS/portfolio) |
 | **Local Dev URL** | `http://localhost:3000` (`bun run dev`) |
 
 ---
 
 ## 📋 Build History & Session Log
+
+### [Build v1.0.3] — Production Vercel Deployment Live
+* **Date:** 2026-10-22
+* **Author:** Antigravity Pair Programmer
+* **Key Achievements:**
+  - Deployed to Vercel production edge: `https://portfolio-five-tau-otr0exu0jk.vercel.app`.
+  - Verified live deployment response over HTTPS (`HTTP/1.1 200 OK`, `Content-Length: 40924`).
+  - Synced project status and build manifest across repository.
+* **Files Modified:**
+  - `build-manifest.json`
+  - `BUILDS.md`
+  - `README.md`
+
+---
 
 ### [Build v1.0.2] — GitHub Remote Sync & Vercel Deployment Initialization
 * **Date:** 2026-10-22

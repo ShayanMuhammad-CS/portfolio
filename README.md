@@ -1,6 +1,7 @@
 # Shayan Muhammad — Personal Portfolio Website ⚡
 
-> **Full-Stack AI Engineer | RAG Pipelines | Agentic Workflows | Computer Vision**
+> **Full-Stack AI Engineer | RAG Pipelines | Agentic Workflows | Computer Vision**  
+> 🌐 **Live Website:** [https://portfolio-five-tau-otr0exu0jk.vercel.app](https://portfolio-five-tau-otr0exu0jk.vercel.app)
 
 A high-performance, dark-themed developer portfolio crafted with vanilla HTML5, CSS3, and modern JavaScript. Designed with glassmorphism, interactive particle networks, smooth scroll reveals, dynamic typing, and responsive layout.
 
