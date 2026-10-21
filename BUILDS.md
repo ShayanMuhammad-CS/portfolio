@@ -11,7 +11,7 @@
 
 | Attribute | Current Value |
 | :--- | :--- |
-| **Current Build Version** | `v1.0.3` |
+| **Current Build Version** | `v1.0.4` |
 | **Status** | 🟢 Production Deployed & Verified Live (HTTP 200) |
 | **Last Updated** | 2026-10-22 |
 | **Primary Runtime** | Bun 1.4.0 (Windows Native) |
@@ -24,6 +24,26 @@
 ---
 
 ## 📋 Build History & Session Log
+
+### [Build v1.0.4] — Manager Agent Architecture & Google/PayPal Staff UI Overhaul
+* **Date:** 2026-10-22
+* **Author:** Manager Agent (Pair Programming Architecture)
+* **Key Achievements:**
+  - **Deed 1 (Frontend Agent):** Overhauled UI/UX to eliminate "white-coded" aesthetic. Deep obsidian/carbon surfaces (`#06080F`, `#090D16`), Google/PayPal gradient accents, live ticking Islamabad (PKT • UTC+5) clock, specialties dropdown menu, and interactive project category filtering.
+  - **Deed 2 (Design Refinement):** Removed cartoonish toy emojis (`🤖`), replacing them with precision vector SVGs (neural network, microchips, terminal, layers). Removed raw email exposure (`shayanmuhammad.cs@gmail.com`) for privacy, and replaced placeholder photo card with real-time Architecture System Telemetry & Pipeline Monitor.
+  - **Deed 3 (Backend Agent):** Auto-provisioned missing Playwright 1.64.1 & Chromium 1248 drivers (`197.5 MiB`) without blocking or asking the user.
+  - **Deed 4 (Manager Governance):** Codified the Manager Agent & Distributed Deeds Contract into `AGENTS.md` and `.agents/rules/continuity.md`.
+* **Files Modified:**
+  - `index.html`
+  - `index.css`
+  - `index.js`
+  - `AGENTS.md`
+  - `AGENT_REFLECTION.md`
+  - `.agents/rules/continuity.md`
+  - `build-manifest.json`
+  - `BUILDS.md`
+
+---
 
 ### [Build v1.0.3] — Production Vercel Deployment Live
 * **Date:** 2026-10-22

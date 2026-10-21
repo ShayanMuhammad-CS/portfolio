@@ -1,301 +1,308 @@
-/* ============================================
-   Shayan Muhammad — Portfolio JavaScript
-   Particles, Typing, Scroll Reveals, Counters
-   ============================================ */
+/* ==========================================================================
+   Shayan Muhammad — High-Performance Portfolio JavaScript
+   Canvas Particles, Typing Effect, Live Clock, Dropdowns & Project Filters
+   ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ========== PARTICLES BACKGROUND ==========
+  // ========== 1. PARTICLES BACKGROUND (CYAN/INDIGO GLOW) ==========
   const canvas = document.getElementById('particles-canvas');
-  const ctx = canvas.getContext('2d');
-  let particles = [];
-  let mouse = { x: null, y: null, radius: 120 };
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+    let mouse = { x: null, y: null, radius: 140 };
 
-  function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }
-  resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
-
-  window.addEventListener('mousemove', (e) => {
-    mouse.x = e.x;
-    mouse.y = e.y;
-  });
-
-  class Particle {
-    constructor() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
-      this.size = Math.random() * 2 + 0.5;
-      this.speedX = (Math.random() - 0.5) * 0.6;
-      this.speedY = (Math.random() - 0.5) * 0.6;
-      this.opacity = Math.random() * 0.5 + 0.1;
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     }
-    update() {
-      this.x += this.speedX;
-      this.y += this.speedY;
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
-      // Mouse interaction
-      if (mouse.x !== null) {
-        const dx = mouse.x - this.x;
-        const dy = mouse.y - this.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < mouse.radius) {
-          const force = (mouse.radius - dist) / mouse.radius;
-          this.x -= (dx / dist) * force * 2;
-          this.y -= (dy / dist) * force * 2;
-        }
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+
+    window.addEventListener('mouseout', () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 2 + 0.6;
+        this.speedX = (Math.random() - 0.5) * 0.45;
+        this.speedY = (Math.random() - 0.5) * 0.45;
+        this.color = Math.random() > 0.5 ? 'rgba(0, 242, 254, ' : 'rgba(99, 102, 241, ';
+        this.opacity = Math.random() * 0.4 + 0.15;
       }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
 
-      // Wrap around
-      if (this.x < 0) this.x = canvas.width;
-      if (this.x > canvas.width) this.x = 0;
-      if (this.y < 0) this.y = canvas.height;
-      if (this.y > canvas.height) this.y = 0;
-    }
-    draw() {
-      ctx.fillStyle = `rgba(139, 92, 246, ${this.opacity})`;
-      ctx.beginPath();
-      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-      ctx.fill();
-    }
-  }
-
-  function initParticles() {
-    particles = [];
-    const count = Math.min(Math.floor((canvas.width * canvas.height) / 12000), 120);
-    for (let i = 0; i < count; i++) {
-      particles.push(new Particle());
-    }
-  }
-  initParticles();
-  window.addEventListener('resize', initParticles);
-
-  function connectParticles() {
-    for (let a = 0; a < particles.length; a++) {
-      for (let b = a + 1; b < particles.length; b++) {
-        const dx = particles[a].x - particles[b].x;
-        const dy = particles[a].y - particles[b].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 140) {
-          const opacity = (1 - dist / 140) * 0.15;
-          ctx.strokeStyle = `rgba(139, 92, 246, ${opacity})`;
-          ctx.lineWidth = 0.6;
-          ctx.beginPath();
-          ctx.moveTo(particles[a].x, particles[a].y);
-          ctx.lineTo(particles[b].x, particles[b].y);
-          ctx.stroke();
+        if (mouse.x !== null) {
+          const dx = mouse.x - this.x;
+          const dy = mouse.y - this.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < mouse.radius) {
+            const force = (mouse.radius - dist) / mouse.radius;
+            this.x -= (dx / dist) * force * 2;
+            this.y -= (dy / dist) * force * 2;
+          }
         }
+
+        if (this.x < 0) this.x = canvas.width;
+        if (this.x > canvas.width) this.x = 0;
+        if (this.y < 0) this.y = canvas.height;
+        if (this.y > canvas.height) this.y = 0;
+      }
+      draw() {
+        ctx.fillStyle = this.color + this.opacity + ')';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
       }
     }
+
+    function initParticles() {
+      particles = [];
+      const count = Math.min(Math.floor((canvas.width * canvas.height) / 14000), 90);
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle());
+      }
+    }
+    initParticles();
+    window.addEventListener('resize', initParticles);
+
+    function connectParticles() {
+      for (let a = 0; a < particles.length; a++) {
+        for (let b = a + 1; b < particles.length; b++) {
+          const dx = particles[a].x - particles[b].x;
+          const dy = particles[a].y - particles[b].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 130) {
+            const opacity = (1 - dist / 130) * 0.12;
+            ctx.strokeStyle = `rgba(0, 242, 254, ${opacity})`;
+            ctx.lineWidth = 0.5;
+            ctx.beginPath();
+            ctx.moveTo(particles[a].x, particles[a].y);
+            ctx.lineTo(particles[b].x, particles[b].y);
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => { p.update(); p.draw(); });
+      connectParticles();
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
   }
 
-  function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => { p.update(); p.draw(); });
-    connectParticles();
-    requestAnimationFrame(animateParticles);
+
+  // ========== 2. LIVE ISLAMABAD PKT CLOCK ==========
+  const liveTimeEl = document.getElementById('liveTime');
+  function updateIslamabadTime() {
+    if (!liveTimeEl) return;
+    try {
+      const now = new Date();
+      const options = {
+        timeZone: 'Asia/Karachi',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+      };
+      const formatter = new Intl.DateTimeFormat('en-US', options);
+      liveTimeEl.textContent = `${formatter.format(now)} PKT`;
+    } catch (e) {
+      liveTimeEl.textContent = 'UTC+5 PKT';
+    }
   }
-  animateParticles();
+  updateIslamabadTime();
+  setInterval(updateIslamabadTime, 1000);
 
 
-  // ========== TYPING ANIMATION ==========
+  // ========== 3. SPECIALTIES DROPDOWN MENU ==========
+  const dropdownBtn = document.getElementById('categoryDropdownBtn');
+  const dropdownMenu = document.getElementById('categoryDropdownMenu');
+
+  if (dropdownBtn && dropdownMenu) {
+    dropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = dropdownBtn.getAttribute('aria-expanded') === 'true';
+      dropdownBtn.setAttribute('aria-expanded', !isExpanded);
+      dropdownMenu.classList.toggle('show');
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+        dropdownMenu.classList.remove('show');
+      }
+    });
+
+    // Handle dropdown item click
+    dropdownMenu.querySelectorAll('.dropdown-item').forEach(item => {
+      item.addEventListener('click', () => {
+        dropdownBtn.setAttribute('aria-expanded', 'false');
+        dropdownMenu.classList.remove('show');
+        const filterVal = item.getAttribute('data-filter');
+        if (filterVal) {
+          triggerProjectFilter(filterVal);
+        }
+      });
+    });
+  }
+
+
+  // ========== 4. TYPING EFFECT ==========
   const roles = [
-    'Full-Stack AI Engineer',
-    'RAG Pipeline Builder',
-    'Open Source Contributor',
-    'Computer Vision Developer',
-    'React + FastAPI Developer',
+    'Autonomous Agentic Pipelines',
+    'Low-Latency Neural RAG',
+    'High-Throughput Distributed Backends',
+    'Edge Computer Vision & YOLOv8',
+    'Full-Stack Architecture (React + FastAPI)'
   ];
   const typingEl = document.getElementById('typingText');
-  let roleIndex = 0, charIndex = 0, isDeleting = false;
+  if (typingEl) {
+    let roleIndex = 0, charIndex = 0, isDeleting = false;
 
-  function typeRole() {
-    const current = roles[roleIndex];
-    if (isDeleting) {
-      typingEl.textContent = current.substring(0, charIndex - 1);
-      charIndex--;
-    } else {
-      typingEl.textContent = current.substring(0, charIndex + 1);
-      charIndex++;
+    function typeRole() {
+      const current = roles[roleIndex];
+      if (isDeleting) {
+        typingEl.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingEl.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let speed = isDeleting ? 30 : 65;
+
+      if (!isDeleting && charIndex === current.length) {
+        speed = 2200;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        speed = 400;
+      }
+
+      setTimeout(typeRole, speed);
     }
-
-    let speed = isDeleting ? 40 : 80;
-
-    if (!isDeleting && charIndex === current.length) {
-      speed = 2200;
-      isDeleting = true;
-    } else if (isDeleting && charIndex === 0) {
-      isDeleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-      speed = 400;
-    }
-
-    setTimeout(typeRole, speed);
+    typeRole();
   }
-  typeRole();
 
 
-  // ========== NAVBAR SCROLL ==========
-  const navbar = document.getElementById('navbar');
-  const navLinks = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+  // ========== 5. INTERACTIVE PROJECT FILTER TABS ==========
+  const filterPills = document.querySelectorAll('.filter-pill');
+  const projectCards = document.querySelectorAll('.project-card');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 60) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
-
-    // Active link highlight
-    const sections = document.querySelectorAll('section[id]');
-    let current = '';
-    sections.forEach(section => {
-      const top = section.offsetTop - 200;
-      if (window.scrollY >= top) {
-        current = section.getAttribute('id');
+  function triggerProjectFilter(filter) {
+    filterPills.forEach(btn => {
+      if (btn.getAttribute('data-filter') === filter) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
       }
     });
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
+
+    projectCards.forEach(card => {
+      const category = card.getAttribute('data-category');
+      if (filter === 'all' || category === filter) {
+        card.style.display = 'flex';
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(12px)';
+        setTimeout(() => {
+          card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, 10);
+      } else {
+        card.style.display = 'none';
       }
+    });
+  }
+
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      const filter = pill.getAttribute('data-filter');
+      triggerProjectFilter(filter);
     });
   });
 
 
-  // ========== MOBILE NAV TOGGLE ==========
-  const navToggle = document.getElementById('navToggle');
-  const navMenu = document.getElementById('navLinks');
-
-  navToggle.addEventListener('click', () => {
-    navToggle.classList.toggle('active');
-    navMenu.classList.toggle('active');
-    document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
-  });
-
-  // Close mobile nav on link click
-  navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navToggle.classList.remove('active');
-      navMenu.classList.remove('active');
-      document.body.style.overflow = '';
-    });
-  });
-
-
-  // ========== SCROLL REVEAL ANIMATION ==========
-  const revealElements = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-  revealElements.forEach(el => revealObserver.observe(el));
-
-
-  // ========== COUNTER ANIMATION ==========
-  const statNumbers = document.querySelectorAll('.stat-number[data-count]');
+  // ========== 6. ANIMATED IMPACT COUNTERS ==========
+  const statNumbers = document.querySelectorAll('.stat-number');
   const counterObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const target = entry.target;
-        const countTo = parseInt(target.getAttribute('data-count'));
+        const countTo = parseInt(target.getAttribute('data-target') || '0', 10);
         let count = 0;
-        const duration = 2000;
-        const increment = countTo / (duration / 16);
+        const duration = 1800;
+        const stepTime = 20;
+        const increment = countTo / (duration / stepTime);
 
         const timer = setInterval(() => {
           count += increment;
           if (count >= countTo) {
-            target.textContent = countTo + '+';
+            target.textContent = countTo + (countTo === 50 ? '<' : '+');
+            if (countTo === 50) target.textContent = '<50';
             clearInterval(timer);
           } else {
-            target.textContent = Math.floor(count) + '+';
+            target.textContent = Math.floor(count);
           }
-        }, 16);
+        }, stepTime);
 
         counterObserver.unobserve(target);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.3 });
 
   statNumbers.forEach(el => counterObserver.observe(el));
 
 
-  // ========== SCROLL TO TOP ==========
-  const scrollTopBtn = document.getElementById('scrollTop');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 500) {
-      scrollTopBtn.classList.add('visible');
-    } else {
-      scrollTopBtn.classList.remove('visible');
-    }
-  });
+  // ========== 7. MOBILE NAVIGATION TOGGLE ==========
+  const navToggle = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navLinks');
 
-  scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  }
 
 
-  // ========== SMOOTH SCROLL FOR ANCHOR LINKS ==========
+  // ========== 8. SMOOTH SCROLL FOR INTERNAL ANCHORS ==========
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
-      e.preventDefault();
-      const target = document.querySelector(anchor.getAttribute('href'));
+      const targetId = anchor.getAttribute('href');
+      if (targetId === '#') return;
+      const target = document.querySelector(targetId);
       if (target) {
-        const offset = 80;
+        e.preventDefault();
+        const offset = 85;
         const top = target.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top, behavior: 'smooth' });
       }
     });
   });
-
-
-  // ========== CONTACT FORM (Graceful fallback) ==========
-  const contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      const action = contactForm.getAttribute('action');
-      if (action.includes('YOUR_FORM_ID')) {
-        e.preventDefault();
-        const btn = document.getElementById('submitBtn');
-        btn.textContent = '✓ Message Sent (demo)';
-        btn.style.background = 'linear-gradient(135deg, #10b981, #06b6d4)';
-        setTimeout(() => {
-          btn.textContent = 'Send Message →';
-          btn.style.background = '';
-          contactForm.reset();
-        }, 3000);
-      }
-    });
-  }
-
-
-  // ========== PROFILE IMAGE FALLBACK ==========
-  const heroImage = document.getElementById('heroImage');
-  if (heroImage) {
-    heroImage.addEventListener('error', () => {
-      // Generate an SVG initials avatar as fallback
-      heroImage.src = 'data:image/svg+xml,' + encodeURIComponent(`
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-          <defs>
-            <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#8b5cf6"/>
-              <stop offset="100%" style="stop-color:#06b6d4"/>
-            </linearGradient>
-          </defs>
-          <rect width="400" height="400" fill="url(#g)"/>
-          <text x="200" y="220" font-family="Inter,sans-serif" font-size="140" font-weight="800" text-anchor="middle" fill="white">SM</text>
-        </svg>
-      `);
-    });
-  }
 
 });

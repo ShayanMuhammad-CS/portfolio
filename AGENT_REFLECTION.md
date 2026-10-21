@@ -67,3 +67,25 @@ flowchart TD
    - Injects build version badges and checks integrity.
 4. **Model Context Protocol (`.agents/mcp_config.json`):**
    - Configured MCP integrations for enhanced tooling, filesystem analysis, and browser/UI workflows.
+
+---
+
+## 4. The Manager Agent Architecture & Distributed Deeds
+
+> **"You will be a manager agent: distribute your work to different agents, make it like front and back, and so they all can talk to each other when needed."**
+
+### Core Principles of Manager Agent Operation:
+1. **Explicit Deeds Ledger (Done vs. In-Flight vs. Pending):**
+   - The Manager never operates blindly. Every problem is decomposed into verifiable "deeds".
+   - Before executing: Draft the deed manifest.
+   - After executing: Review and log what was done and what needs to be done.
+2. **Specialized Agent Roles:**
+   - 🎨 **Frontend Agent Deed:** Focuses purely on visual hierarchy, deep obsidian palette, typography, micro-interactions, and removing white-coded/toy-like artifacts.
+   - ⚡ **Backend & Build Agent Deed:** Manages native Bun runtimes, build verification scripts, dependency self-installation (Playwright/Chromium), and edge deploy manifests.
+   - 🛡️ **QA & Security Reviewer Deed:** Conducts privacy audits (e.g. eliminating raw scraped emails), link verification, anchor integrity, and production Lighthouse readiness.
+3. **Never Halt on Missing Tools:**
+   - If Playwright or Chromium is absent, the Backend Agent immediately downloads and provisions it without asking the user.
+4. **Professional Staff Engineer Aesthetics:**
+   - Replaces cartoonish emojis (`🤖`) with precision vector SVGs (CPU chips, neural graphs, terminal prompts).
+   - Replaces profile avatar placeholders with real-time System Telemetry & Architecture Pipeline monitors.
+

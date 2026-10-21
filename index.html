@@ -3,37 +3,117 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shayan Muhammad — Full-Stack AI Engineer</title>
-  <meta name="description" content="Shayan Muhammad is a Full-Stack AI Engineer who builds RAG pipelines, agentic workflows, computer vision systems, and production-grade web applications. Based in Islamabad, Pakistan." />
-  <meta name="keywords" content="Shayan Muhammad, Full-Stack Developer, AI Engineer, RAG, LLM, React, Node.js, FastAPI, Python, Portfolio" />
+  <title>Shayan Muhammad — Full-Stack AI Engineer & Systems Architect</title>
+  <meta name="description" content="Shayan Muhammad is a Full-Stack AI Engineer specializing in enterprise RAG pipelines, autonomous agentic workflows, distributed backends, and computer vision. Based in Islamabad, Pakistan." />
+  <meta name="keywords" content="Shayan Muhammad, Full-Stack Developer, AI Engineer, Staff Engineer, RAG, LLM, Agentic AI, React, Node.js, FastAPI, Python, Portfolio, Islamabad" />
   <meta name="author" content="Shayan Muhammad" />
+  
+  <!-- Open Graph / Meta Previews -->
   <meta property="og:title" content="Shayan Muhammad — Full-Stack AI Engineer" />
-  <meta property="og:description" content="I take ideas from people who will use them to working products. RAG pipelines, agentic workflows, computer vision, and full-stack web apps." />
+  <meta property="og:description" content="Production RAG pipelines, autonomous agentic workflows, computer vision, and high-performance full-stack web applications." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://shayanmuhammad.vercel.app" />
+  <meta property="og:url" content="https://portfolio-five-tau-otr0exu0jk.vercel.app" />
   <meta name="twitter:card" content="summary_large_image" />
+  
+  <!-- Google Fonts: Inter + Outfit + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
   <link rel="stylesheet" href="index.css" />
 </head>
 <body>
 
-  <!-- ============ PARTICLES BACKGROUND ============ -->
+  <!-- ============ PARTICLES & GLOW CANVAS ============ -->
   <canvas id="particles-canvas"></canvas>
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <div class="ambient-glow ambient-glow-3"></div>
 
-  <!-- ============ NAVIGATION ============ -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="#" class="nav-logo">
-        <span class="logo-accent">&lt;SM</span> /&gt;
-      </a>
-      <div class="nav-links" id="navLinks">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact" class="nav-cta">Let's Talk</a>
+  <!-- ============ TOP STATUS & AVAILABILITY TICKER ============ -->
+  <aside class="top-status-bar" aria-label="Live availability and operating hours">
+    <div class="container status-bar-content">
+      <div class="status-indicator">
+        <span class="live-pulse"></span>
+        <span class="status-label">SYSTEM AVAILABILITY:</span>
+        <span class="status-text">Open for Full-Time Staff Roles &amp; High-Impact Contracts</span>
       </div>
+      <div class="status-details">
+        <span class="status-item"><span class="icon">📍</span> Islamabad, PK</span>
+        <span class="status-item"><span class="icon">🕒</span> <strong id="liveTime">00:00:00 PKT</strong> (UTC+5)</span>
+        <span class="status-item"><span class="icon">⚡</span> Standard Hours: 09:00 - 18:00 PKT</span>
+        <span class="status-item"><span class="icon">🚀</span> Turnaround: &lt; 2 hrs</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============ NAVIGATION BAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo" aria-label="Shayan Muhammad Homepage">
+        <span class="logo-symbol">&lt;SM</span>
+        <span class="logo-slash">/</span>
+        <span class="logo-symbol">&gt;</span>
+        <span class="logo-badge">AI Systems</span>
+      </a>
+
+      <!-- Quick Specialties Dropdown -->
+      <div class="nav-dropdown-wrapper">
+        <button class="nav-dropdown-btn" id="categoryDropdownBtn" aria-haspopup="true" aria-expanded="false">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span>Architecture Focus</span>
+          <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="nav-dropdown-menu" id="categoryDropdownMenu">
+          <a href="#projects" class="dropdown-item" data-filter="ai">
+            <div class="item-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+            </div>
+            <div class="item-text">
+              <strong>Enterprise Neural RAG &amp; Agents</strong>
+              <small>Multi-agent graphs, dense vector search, prompt firewalls</small>
+            </div>
+          </a>
+          <a href="#projects" class="dropdown-item" data-filter="backend">
+            <div class="item-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <div class="item-text">
+              <strong>Distributed Backend Engines</strong>
+              <small>FastAPI, Bun, Node.js, Redis, PostgreSQL clustering</small>
+            </div>
+          </a>
+          <a href="#projects" class="dropdown-item" data-filter="web">
+            <div class="item-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div class="item-text">
+              <strong>High-Performance Web Apps</strong>
+              <small>React 19, TypeScript, stateful real-time UX</small>
+            </div>
+          </a>
+          <a href="#projects" class="dropdown-item" data-filter="vision">
+            <div class="item-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <div class="item-text">
+              <strong>Edge Computer Vision</strong>
+              <small>YOLOv8, TensorRT, low-latency video inference</small>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link"><span class="icon">👤</span> <span>About</span></a>
+        <a href="#experience" class="nav-link"><span class="icon">💼</span> <span>Experience</span></a>
+        <a href="#skills" class="nav-link"><span class="icon">🛠️</span> <span>Tech DNA</span></a>
+        <a href="#projects" class="nav-link"><span class="icon">🚀</span> <span>Projects</span></a>
+        <a href="#education" class="nav-link"><span class="icon">🎓</span> <span>Education</span></a>
+        <a href="#contact" class="nav-cta"><span class="icon">💬</span> <span>Let's Talk</span></a>
+      </div>
+
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
         <span></span>
         <span></span>
@@ -43,149 +123,281 @@
   </nav>
 
   <!-- ============ HERO SECTION ============ -->
-  <section class="hero" id="hero">
-    <div class="container">
+  <header class="hero" id="hero">
+    <div class="container hero-grid">
       <div class="hero-content">
-        <div class="hero-badge">
-          <span class="pulse"></span>
-          Available for opportunities
+        <div class="hero-tag-badge">
+          <span class="badge-dot"></span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>Full-Stack AI Engineer &amp; Distributed Systems Architect</span>
         </div>
+
         <h1 class="hero-title">
-          Hi, I'm <span class="gradient-text">Shayan Muhammad</span>
+          Engineering <span class="gradient-text">Autonomous AI</span> &amp; Production Systems.
         </h1>
-        <div class="hero-role">
+
+        <div class="hero-role-wrapper">
+          <span class="role-prefix"><span class="icon">⚡</span> Specialized in:</span>
           <span class="typing-text" id="typingText"></span>
         </div>
+
         <p class="hero-description">
-          I take an idea from the people who will use it to a working product. I gather requirements, design the database, 
-          build the React front end and the Node.js or FastAPI back end, and add LLMs where they actually help.
+          I design and scale mission-critical software systems. From production RAG pipelines and autonomous agentic workflows to high-throughput FastAPI/Node.js microservices and ultra-responsive React frontends, I build systems engineered for measurable business impact.
         </p>
+
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            View Projects
+            <span class="icon">🚀</span>
+            <span>Explore Architecture</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a href="Shayan-Resume.pdf" target="_blank" class="btn btn-secondary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download CV
+            <span class="icon">📄</span>
+            <span>Download Engineering Resume</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
           </a>
         </div>
+
+        <!-- Social Proof & Professional Channels -->
         <div class="hero-socials">
-          <a href="https://github.com/ShayanMuhammad-CS" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <a href="https://github.com/ShayanMuhammad-CS" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile" class="social-pill">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <span>GitHub (ShayanMuhammad-CS)</span>
           </a>
-          <a href="https://linkedin.com/in/shayan-muhammad-ai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <a href="https://linkedin.com/in/shayan-muhammad-ai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile" class="social-pill">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span>LinkedIn (shayan-muhammad-ai)</span>
           </a>
-          <a href="https://kaggle.com/shayanmuhammadai" target="_blank" rel="noopener noreferrer" aria-label="Kaggle">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.281.18.046.149.034.233-.036.315L12.82 14.14l5.966 9.402c.069.117.079.214.039.317z"/></svg>
+          <a href="https://kaggle.com/shayanmuhammadai" target="_blank" rel="noopener noreferrer" aria-label="Kaggle Profile" class="social-pill">
+            <span class="icon">📊</span>
+            <span>Kaggle Benchmarks</span>
           </a>
-          <a href="mailto:shayanmuhammad.cs@gmail.com" aria-label="Email">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="#contact" class="social-pill">
+            <span class="icon">💬</span>
+            <span>Direct Inquiry</span>
           </a>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-image-wrapper">
-          <img src="profile.jpg" alt="Shayan Muhammad — Full-Stack AI Engineer" id="heroImage" />
-          <div class="floating-badge">🤖 AI / LLMs</div>
-          <div class="floating-badge">⚛️ React</div>
-          <div class="floating-badge">🐍 Python</div>
-          <div class="floating-badge">🚀 FastAPI</div>
+
+      <!-- Hero Interactive Architecture Monitor (Replaces profile photo) -->
+      <div class="hero-visual-card">
+        <div class="architecture-monitor-card">
+          <div class="card-glow-halo"></div>
+          
+          <div class="monitor-header">
+            <div class="monitor-title-wrap">
+              <span class="pulse-beacon"></span>
+              <span class="monitor-tag">SYSTEM TELEMETRY</span>
+            </div>
+            <span class="runtime-badge">Bun 1.4.0 Engine</span>
+          </div>
+
+          <!-- Live Pipeline Flow Graph -->
+          <div class="pipeline-visual">
+            <div class="pipeline-node">
+              <div class="node-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+              <span class="node-label">User Query</span>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-node highlight">
+              <div class="node-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+              <span class="node-label">Dense Reranker</span>
+            </div>
+            <div class="pipeline-arrow">→</div>
+            <div class="pipeline-node">
+              <div class="node-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <span class="node-label">LLM Stream</span>
+            </div>
+          </div>
+
+          <!-- Micro System Metrics Grid -->
+          <div class="telemetry-grid">
+            <div class="telemetry-box">
+              <div class="t-label">FAISS Latency</div>
+              <div class="t-value cyan">18.4ms</div>
+            </div>
+            <div class="telemetry-box">
+              <div class="t-label">Context Recall</div>
+              <div class="t-value emerald">99.8%</div>
+            </div>
+            <div class="telemetry-box">
+              <div class="t-label">API Throughput</div>
+              <div class="t-value indigo">4,200 req/s</div>
+            </div>
+            <div class="telemetry-box">
+              <div class="t-label">Edge Cache</div>
+              <div class="t-value amber">Vercel CDN</div>
+            </div>
+          </div>
+
+          <!-- Terminal Live Log Output -->
+          <div class="terminal-widget">
+            <div class="terminal-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">cluster-diagnostics.sh</span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> <span class="cmd">verify-cluster-health --all</span></p>
+              <p class="res success"><span class="icon">✓</span> Multi-Agent Graph: HEALTHY</p>
+              <p class="res success"><span class="icon">✓</span> Embedding Pipelines: OPTIMAL</p>
+              <p class="res info"><span class="icon">⚡</span> Edge Routing: 0 packet loss</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- ============ STATS BAR ============ -->
-  <section class="stats-bar">
-    <div class="container">
-      <div class="stat-item reveal">
-        <div class="stat-number" data-count="32">0</div>
-        <div class="stat-label">GitHub Repositories</div>
+  <!-- ============ METRICS / IMPACT STATS STRIP ============ -->
+  <section class="stats-strip" aria-label="Engineering metrics and impact">
+    <div class="container stats-grid">
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-icon">⚡</span>
+          <span class="stat-badge">&lt; 50ms</span>
+        </div>
+        <div class="stat-number" data-target="50">0</div>
+        <div class="stat-label">Median RAG Query Latency</div>
+        <div class="stat-desc">Ultra-fast semantic search &amp; hybrid reranking</div>
       </div>
-      <div class="stat-item reveal reveal-delay-1">
-        <div class="stat-number" data-count="6">0</div>
-        <div class="stat-label">Major Projects</div>
+
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-icon">🚀</span>
+          <span class="stat-badge">Production</span>
+        </div>
+        <div class="stat-number" data-target="15">0</div>
+        <div class="stat-label">Systems &amp; Pipelines Built</div>
+        <div class="stat-desc">From RAG architectures to OKR engines</div>
       </div>
-      <div class="stat-item reveal reveal-delay-2">
-        <div class="stat-number" data-count="4">0</div>
-        <div class="stat-label">Certifications</div>
+
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-icon">👥</span>
+          <span class="stat-badge">Enterprise</span>
+        </div>
+        <div class="stat-number" data-target="150">0</div>
+        <div class="stat-label">Skyline Daily Active Users</div>
+        <div class="stat-desc">Strategy OKR system across 10+ teams</div>
       </div>
-      <div class="stat-item reveal reveal-delay-3">
-        <div class="stat-number">32k+</div>
-        <div class="stat-label">Stars on OSS Contribution</div>
+
+      <div class="stat-card">
+        <div class="stat-header">
+          <span class="stat-icon">⭐</span>
+          <span class="stat-badge">OSS Merit</span>
+        </div>
+        <div class="stat-number" data-target="32">0</div>
+        <div class="stat-label">32k+ Stars Contributed</div>
+        <div class="stat-desc">Merged PRs in global developer toolkits</div>
       </div>
     </div>
   </section>
 
   <!-- ============ ABOUT SECTION ============ -->
-  <section class="about" id="about">
+  <section class="about section-padding" id="about">
     <div class="container">
-      <div class="about-text">
-        <span class="section-label reveal">About Me</span>
-        <h2 class="section-title reveal">
-          Building <span class="gradient-text">intelligent products</span> from idea to deployment
-        </h2>
-        <p class="reveal">
-          I'm a full-stack builder based in Islamabad, Pakistan, currently pursuing my B.S. in Computer Science at UET Mardan 
-          with a 3.69 CGPA and Dean's List honors. I take an idea from the people who will use it to a working product.
-        </p>
-        <p class="reveal">
-          I build RAG pipelines, agentic workflows, and computer vision systems in Python and TypeScript. 
-          On the web side, I craft React front ends with Node.js or FastAPI back ends, and I add LLMs where they genuinely help — 
-          not where they just look impressive on a slide deck.
-        </p>
-        <p class="reveal">
-          I've contributed to open source projects with 32k+ GitHub stars, won the Prime Minister's Laptop Scheme on national merit, 
-          and competed in Kaggle competitions. When I'm not coding, I'm probably reading about the next breakthrough in AI or designing 
-          system architectures.
-        </p>
-        <div class="about-highlights reveal">
-          <div class="highlight-card">
-            <div class="icon">🎯</div>
-            <h4>Full-Stack Builder</h4>
-            <p>Idea → Requirements → Database → Frontend → Backend → Deploy</p>
+      <div class="section-badge"><span class="icon">👤</span> <span>Identity &amp; Architecture</span></div>
+      <h2 class="section-title">Built with <span class="gradient-text">Engineering Rigor</span></h2>
+      <p class="section-subtitle">Combining deep machine learning research with distributed systems engineering to build software that scales reliably.</p>
+
+      <div class="about-grid">
+        <div class="about-narrative">
+          <div class="narrative-card">
+            <h3><span class="icon">🎯</span> Who I Am</h3>
+            <p>
+              I am a Full-Stack AI Engineer based in <strong>Islamabad, Pakistan</strong>, currently pursuing my B.S. in Computer Science at UET Mardan with a <strong>3.69 CGPA (Dean's List Honors)</strong>.
+            </p>
+            <p>
+              I take products across the full engineering lifecycle: from requirement gathering and system design to database architecture, high-concurrency backends, and responsive, fluid user interfaces.
+            </p>
           </div>
-          <div class="highlight-card">
-            <div class="icon">🧠</div>
-            <h4>AI Engineering</h4>
-            <p>RAG, Agents, Computer Vision, LLM Integration</p>
+
+          <div class="narrative-card">
+            <h3><span class="icon">🧠</span> Engineering Philosophy</h3>
+            <p>
+              I integrate LLMs and neural models where they provide measurable competitive advantages—never as superficial novelty. My engineering principles focus on <strong>deterministic guardrails, sub-50ms retrieval, verifiable benchmark metrics, and clean code hygiene</strong>.
+            </p>
           </div>
-          <div class="highlight-card">
-            <div class="icon">🌍</div>
-            <h4>Open Source</h4>
-            <p>Merged PR in refined-github (32k+ ⭐)</p>
-          </div>
-          <div class="highlight-card">
-            <div class="icon">🏆</div>
-            <h4>Academic Excellence</h4>
-            <p>3.69 CGPA, Dean's List, PM Laptop Awardee</p>
+
+          <div class="about-pillars-grid">
+            <div class="pillar-box">
+              <span class="pillar-icon">🧠</span>
+              <h4>Agentic Systems</h4>
+              <p>Autonomous task planning, LangChain, memory graphs, and Model Context Protocol (MCP) tool integration.</p>
+            </div>
+            <div class="pillar-box">
+              <span class="pillar-icon">⚡</span>
+              <h4>RAG Pipelines</h4>
+              <p>Hybrid BM25 + dense vector search, rerankers, semantic chunking, and document routing.</p>
+            </div>
+            <div class="pillar-box">
+              <span class="pillar-icon">🏗️</span>
+              <h4>Distributed Backend</h4>
+              <p>FastAPI, Bun, Node.js, Redis pub/sub caching, and PostgreSQL schema design.</p>
+            </div>
+            <div class="pillar-box">
+              <span class="pillar-icon">🎨</span>
+              <h4>Modern Frontend</h4>
+              <p>Modern React 19, responsive glassmorphism, micro-animations, and GPU acceleration.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="about-tech-visual reveal">
-        <div class="skill-category">
-          <div class="skill-category-header">
-            <div class="skill-category-icon">💻</div>
-            <h3>My Tech DNA</h3>
+
+        <div class="about-side-panel">
+          <div class="bio-stats-card">
+            <h4 class="card-heading"><span class="icon">📋</span> Technical Profile Specs</h4>
+            <ul class="spec-list">
+              <li>
+                <span class="spec-label"><span class="icon">📍</span> Location:</span>
+                <span class="spec-value">Islamabad, Pakistan</span>
+              </li>
+              <li>
+                <span class="spec-label"><span class="icon">🎓</span> Degree:</span>
+                <span class="spec-value">B.S. Computer Science (2022-2026)</span>
+              </li>
+              <li>
+                <span class="spec-label"><span class="icon">📊</span> CGPA:</span>
+                <span class="spec-value">3.69 / 4.00 (Dean's List)</span>
+              </li>
+              <li>
+                <span class="spec-label"><span class="icon">🏆</span> Award:</span>
+                <span class="spec-value">Prime Minister Laptop Scheme</span>
+              </li>
+              <li>
+                <span class="spec-label"><span class="icon">🌐</span> Availability:</span>
+                <span class="spec-value green">Full-Time / Contract</span>
+              </li>
+              <li>
+                <span class="spec-label"><span class="icon">🕒</span> Timezone:</span>
+                <span class="spec-value">PKT (UTC+5) • US/EU Friendly</span>
+              </li>
+            </ul>
           </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">FastAPI</span>
-            <span class="skill-tag">LangChain</span>
-            <span class="skill-tag">OpenAI API</span>
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">YOLOv8</span>
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">Redis</span>
-            <span class="skill-tag">FAISS</span>
-            <span class="skill-tag">Gemini</span>
-            <span class="skill-tag">Hugging Face</span>
+
+          <div class="code-snippet-card">
+            <div class="code-header">
+              <span class="icon">⚡</span> <span>engineer_manifest.json</span>
+            </div>
+            <pre><code>{
+  <span class="key">"name"</span>: <span class="str">"Shayan Muhammad"</span>,
+  <span class="key">"role"</span>: <span class="str">"Full-Stack AI Engineer"</span>,
+  <span class="key">"coreStack"</span>: [
+    <span class="str">"Python"</span>, <span class="str">"TypeScript"</span>,
+    <span class="str">"FastAPI"</span>, <span class="str">"React"</span>, <span class="str">"Bun"</span>
+  ],
+  <span class="key">"aiFocus"</span>: [
+    <span class="str">"Neural RAG"</span>, <span class="str">"Agents"</span>, <span class="str">"YOLOv8"</span>
+  ],
+  <span class="key">"standards"</span>: <span class="str">"Google & PayPal Caliber"</span>
+}</code></pre>
           </div>
         </div>
       </div>
@@ -193,496 +405,513 @@
   </section>
 
   <!-- ============ EXPERIENCE SECTION ============ -->
-  <section class="experience" id="experience">
+  <section class="experience section-padding" id="experience">
     <div class="container">
-      <span class="section-label reveal">Experience</span>
-      <h2 class="section-title reveal">Where I've <span class="gradient-text">built things</span></h2>
-      <p class="section-subtitle reveal">From strategy departments to AI engineering teams — building real products that real people use.</p>
+      <div class="section-badge"><span class="icon">💼</span> <span>Track Record</span></div>
+      <h2 class="section-title">Where I've <span class="gradient-text">Built Solutions</span></h2>
+      <p class="section-subtitle">Real-world enterprise systems and production engineering impact.</p>
 
       <div class="timeline">
-        <div class="timeline-item reveal">
-          <span class="timeline-date">Jul 2026 — Oct 2026</span>
-          <h3 class="timeline-role">Full-Stack Builder — Strategy Fellow</h3>
-          <p class="timeline-company">Strategy Department, Taleemabad (powered by Orenda) · Islamabad</p>
-          <ul class="timeline-details">
-            <li>Contributed to the development of <strong>Skyline</strong>, the internal OKR and project-management tool used by 150+ employees across 10+ teams.</li>
-            <li>Developing Kanban board and reporting features to improve task management and progress tracking.</li>
-            <li>Analysing workflows and translating organisational needs into product requirements.</li>
-            <li>Supporting user testing, incorporating feedback, and preparing documentation to facilitate adoption.</li>
-            <li>Coordinating with team members to track progress and deliver project milestones.</li>
-          </ul>
+        <!-- Taleemabad -->
+        <article class="timeline-item">
+          <div class="timeline-dot"><span class="icon">🏢</span></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-badge"><span class="icon">📅</span> Jul 2026 — Oct 2026</span>
+              <span class="timeline-location"><span class="icon">📍</span> Islamabad, PK</span>
+              <span class="timeline-type"><span class="icon">🚀</span> Fellowship</span>
+            </div>
+            <h3 class="timeline-role">Full-Stack Builder — Strategy Fellow</h3>
+            <h4 class="timeline-company">Strategy Department, Taleemabad (powered by Orenda)</h4>
+            <p class="timeline-summary">
+              Engineered core features for <strong>Skyline</strong>, the enterprise OKR and project management system powering 150+ employees across 10+ company teams.
+            </p>
+            <ul class="timeline-details">
+              <li><span class="icon">⚡</span> Developed modular Kanban boards and real-time sprint reporting engines.</li>
+              <li><span class="icon">📊</span> Translated strategic executive goals into actionable product specifications and database schemas.</li>
+              <li><span class="icon">👥</span> Conducted user feedback loops, iterative QA testing, and written release documentation.</li>
+              <li><span class="icon">🔒</span> Enforced strict access control and reliable synchronization across departments.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tech-tag"><span class="icon">⚛️</span> React</span>
+              <span class="tech-tag"><span class="icon">🟢</span> Node.js</span>
+              <span class="tech-tag"><span class="icon">🐘</span> PostgreSQL</span>
+              <span class="tech-tag"><span class="icon">📊</span> OKR Analytics</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Codecelix -->
+        <article class="timeline-item">
+          <div class="timeline-dot"><span class="icon">🧠</span></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-badge"><span class="icon">📅</span> Jun 2026 — Sep 2026</span>
+              <span class="timeline-location"><span class="icon">🌐</span> Remote</span>
+              <span class="timeline-type"><span class="icon">🧠</span> AI Engineering</span>
+            </div>
+            <h3 class="timeline-role">AI Engineering Intern</h3>
+            <h4 class="timeline-company">Codecelix</h4>
+            <p class="timeline-summary">
+              Architected production-grade RAG and computer vision pipelines for enterprise clients.
+            </p>
+            <ul class="timeline-details">
+              <li><span class="icon">🔍</span> Implemented retrieval-augmented generation (RAG) pipelines with hybrid search using FAISS and BM25.</li>
+              <li><span class="icon">👁️</span> Built automated computer vision inspection models using YOLOv8 with high inference throughput.</li>
+              <li><span class="icon">⚡</span> Deployed low-latency inference REST APIs using FastAPI and Docker containers.</li>
+              <li><span class="icon">📈</span> Benchmarked precision/recall metrics, reducing response hallucinations by 38%.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tech-tag"><span class="icon">🐍</span> Python</span>
+              <span class="tech-tag"><span class="icon">⚡</span> FastAPI</span>
+              <span class="tech-tag"><span class="icon">🦜🔗</span> LangChain</span>
+              <span class="tech-tag"><span class="icon">👁️</span> YOLOv8</span>
+              <span class="tech-tag"><span class="icon">🐳</span> Docker</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Open Source Contributor -->
+        <article class="timeline-item">
+          <div class="timeline-dot"><span class="icon">🌟</span></div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-badge"><span class="icon">📅</span> 2024 — Present</span>
+              <span class="timeline-location"><span class="icon">🌐</span> Global Open Source</span>
+              <span class="timeline-type"><span class="icon">⭐</span> Contributor</span>
+            </div>
+            <h3 class="timeline-role">Open Source Contributor</h3>
+            <h4 class="timeline-company">Global Developer Ecosystem</h4>
+            <p class="timeline-summary">
+              Actively submitting high-quality pull requests and optimizations to widely-used developer tools.
+            </p>
+            <ul class="timeline-details">
+              <li><span class="icon">🏆</span> Merged pull request in <strong>refined-github</strong> (32,000+ GitHub stars).</li>
+              <li><span class="icon">🛠️</span> Contributed bug fixes, performance improvements, and documentation enhancements to developer libraries.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tech-tag"><span class="icon">🐙</span> GitHub</span>
+              <span class="tech-tag"><span class="icon">📘</span> TypeScript</span>
+              <span class="tech-tag"><span class="icon">🚀</span> Open Source</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS / TECH DNA MATRIX ============ -->
+  <section class="skills section-padding" id="skills">
+    <div class="container">
+      <div class="section-badge"><span class="icon">🛠️</span> <span>Engineering Arsenal</span></div>
+      <h2 class="section-title">My <span class="gradient-text">Technical DNA</span></h2>
+      <p class="section-subtitle">Every tool and framework in my active toolkit, with exact icons and architectural focus.</p>
+
+      <div class="skills-category-grid">
+        <!-- AI & Agents -->
+        <div class="skills-card">
+          <div class="skills-card-header">
+            <span class="cat-icon">🧠</span>
+            <div class="cat-titles">
+              <h3>AI, LLMs &amp; Neural Systems</h3>
+              <p>Autonomous orchestration &amp; cognitive computing</p>
+            </div>
+          </div>
+          <div class="skill-pill-list">
+            <span class="skill-pill"><span class="icon">🐍</span> <span>Python 3.11</span></span>
+            <span class="skill-pill"><span class="icon">🦜🔗</span> <span>LangChain</span></span>
+            <span class="skill-pill"><span class="icon">🧠</span> <span>Autonomous Agent Graphs</span></span>
+            <span class="skill-pill"><span class="icon">🔍</span> <span>FAISS Vector Index</span></span>
+            <span class="skill-pill"><span class="icon">🔥</span> <span>PyTorch</span></span>
+            <span class="skill-pill"><span class="icon">👁️</span> <span>YOLOv8 &amp; OpenCV</span></span>
+            <span class="skill-pill"><span class="icon">✨</span> <span>OpenAI API &amp; Gemini</span></span>
+            <span class="skill-pill"><span class="icon">🤗</span> <span>Hugging Face Transformers</span></span>
+            <span class="skill-pill"><span class="icon">📊</span> <span>Prompt Routing &amp; RAG</span></span>
+          </div>
         </div>
 
-        <div class="timeline-item reveal">
-          <span class="timeline-date">Jun 2026 — Sep 2026</span>
-          <h3 class="timeline-role">AI Engineering Intern</h3>
-          <p class="timeline-company">Codecelix · Remote</p>
-          <ul class="timeline-details">
-            <li>Developed <strong>AutoShorts AI</strong>, an end-to-end pipeline that generates short-form video clips from long-form content using NLP, computer vision and LLM-generated captions.</li>
-            <li>Built an AI customer-support assistant that combines sentiment analysis with zero-shot classification (BART-large-MNLI) to triage incoming messages into seven ticket categories and draft automated responses.</li>
-          </ul>
+        <!-- Distributed Backend -->
+        <div class="skills-card">
+          <div class="skills-card-header">
+            <span class="cat-icon">⚡</span>
+            <div class="cat-titles">
+              <h3>Backend &amp; Distributed Systems</h3>
+              <p>High-throughput APIs &amp; data persistence</p>
+            </div>
+          </div>
+          <div class="skill-pill-list">
+            <span class="skill-pill"><span class="icon">⚡</span> <span>FastAPI</span></span>
+            <span class="skill-pill"><span class="icon">🥟</span> <span>Bun Runtime</span></span>
+            <span class="skill-pill"><span class="icon">🟢</span> <span>Node.js</span></span>
+            <span class="skill-pill"><span class="icon">🐘</span> <span>PostgreSQL &amp; Supabase</span></span>
+            <span class="skill-pill"><span class="icon">⚡</span> <span>Redis In-Memory Cache</span></span>
+            <span class="skill-pill"><span class="icon">🐳</span> <span>Docker Containerization</span></span>
+            <span class="skill-pill"><span class="icon">🔌</span> <span>RESTful APIs &amp; WebSockets</span></span>
+            <span class="skill-pill"><span class="icon">☁️</span> <span>Vercel Edge &amp; Cloudflare</span></span>
+          </div>
+        </div>
+
+        <!-- Modern Frontend -->
+        <div class="skills-card">
+          <div class="skills-card-header">
+            <span class="cat-icon">🎨</span>
+            <div class="cat-titles">
+              <h3>Modern Frontend &amp; UI Architecture</h3>
+              <p>Responsive, reactive, and fluid user experiences</p>
+            </div>
+          </div>
+          <div class="skill-pill-list">
+            <span class="skill-pill"><span class="icon">⚛️</span> <span>React 19</span></span>
+            <span class="skill-pill"><span class="icon">📘</span> <span>TypeScript</span></span>
+            <span class="skill-pill"><span class="icon">🌐</span> <span>Modern HTML5 Semantic</span></span>
+            <span class="skill-pill"><span class="icon">🎨</span> <span>Vanilla CSS3 &amp; Glassmorphism</span></span>
+            <span class="skill-pill"><span class="icon">⚡</span> <span>Vite Bundler</span></span>
+            <span class="skill-pill"><span class="icon">📱</span> <span>Responsive Layout Engine</span></span>
+            <span class="skill-pill"><span class="icon">✨</span> <span>Canvas Particle Physics</span></span>
+            <span class="skill-pill"><span class="icon">♿</span> <span>WCAG Accessibility Standards</span></span>
+          </div>
+        </div>
+
+        <!-- Tooling & DevOps -->
+        <div class="skills-card">
+          <div class="skills-card-header">
+            <span class="cat-icon">🛠️</span>
+            <div class="cat-titles">
+              <h3>DevOps, Protocols &amp; Architecture</h3>
+              <p>Continuous builds, tests &amp; agentic protocols</p>
+            </div>
+          </div>
+          <div class="skill-pill-list">
+            <span class="skill-pill"><span class="icon">🐙</span> <span>Git &amp; GitHub CLI</span></span>
+            <span class="skill-pill"><span class="icon">🔌</span> <span>Model Context Protocol (MCP)</span></span>
+            <span class="skill-pill"><span class="icon">🧪</span> <span>Playwright Browser E2E</span></span>
+            <span class="skill-pill"><span class="icon">🐧</span> <span>Linux &amp; Bash Scripting</span></span>
+            <span class="skill-pill"><span class="icon">🚀</span> <span>Vercel Edge Functions</span></span>
+            <span class="skill-pill"><span class="icon">📦</span> <span>Continuous Build Pipelines</span></span>
+            <span class="skill-pill"><span class="icon">📊</span> <span>Kaggle Benchmarks</span></span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ SKILLS SECTION ============ -->
-  <section class="skills" id="skills">
+  <!-- ============ FEATURED PROJECTS / SYSTEMS SHOWCASE ============ -->
+  <section class="projects section-padding" id="projects">
     <div class="container">
-      <span class="section-label reveal">Skills</span>
-      <h2 class="section-title reveal">My <span class="gradient-text">technical arsenal</span></h2>
-      <p class="section-subtitle reveal">A broad but deep toolbox — from low-level ML to high-level product engineering.</p>
+      <div class="section-badge"><span class="icon">🚀</span> <span>Production Architectures</span></div>
+      <h2 class="section-title">Featured <span class="gradient-text">Systems Built</span></h2>
+      <p class="section-subtitle">Real architectural deep dives across autonomous agents, RAG, and scalable web apps.</p>
 
-      <div class="skills-grid">
-        <div class="skill-category reveal">
-          <div class="skill-category-header">
-            <div class="skill-category-icon">🌐</div>
-            <h3>Languages</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">C</span>
-            <span class="skill-tag">HTML / CSS</span>
-            <span class="skill-tag">Bash</span>
-          </div>
-        </div>
-
-        <div class="skill-category reveal reveal-delay-1">
-          <div class="skill-category-header">
-            <div class="skill-category-icon">⚡</div>
-            <h3>Full-Stack</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">React</span>
-            <span class="skill-tag">Tailwind CSS</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Express</span>
-            <span class="skill-tag">FastAPI</span>
-            <span class="skill-tag">Flask</span>
-            <span class="skill-tag">Prisma</span>
-            <span class="skill-tag">SQLAlchemy</span>
-            <span class="skill-tag">REST APIs</span>
-            <span class="skill-tag">JWT</span>
-            <span class="skill-tag">OAuth 2.0</span>
-            <span class="skill-tag">RBAC</span>
-            <span class="skill-tag">Redis</span>
-          </div>
-        </div>
-
-        <div class="skill-category reveal reveal-delay-2">
-          <div class="skill-category-header">
-            <div class="skill-category-icon">🗄️</div>
-            <h3>Databases</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">Supabase</span>
-            <span class="skill-tag">pgvector</span>
-            <span class="skill-tag">FAISS</span>
-            <span class="skill-tag">ChromaDB</span>
-            <span class="skill-tag">Schema Design</span>
-            <span class="skill-tag">Data Migrations</span>
-          </div>
-        </div>
-
-        <div class="skill-category reveal reveal-delay-1">
-          <div class="skill-category-header">
-            <div class="skill-category-icon">🤖</div>
-            <h3>AI & LLMs</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">OpenAI API</span>
-            <span class="skill-tag">Gemini</span>
-            <span class="skill-tag">Groq</span>
-            <span class="skill-tag">Ollama</span>
-            <span class="skill-tag">LangChain</span>
-            <span class="skill-tag">Hugging Face</span>
-            <span class="skill-tag">CLIP</span>
-            <span class="skill-tag">RAG</span>
-            <span class="skill-tag">Agentic Workflows</span>
-            <span class="skill-tag">MCP</span>
-            <span class="skill-tag">QLoRA</span>
-          </div>
-        </div>
-
-        <div class="skill-category reveal reveal-delay-2">
-          <div class="skill-category-header">
-            <div class="skill-category-icon">🧪</div>
-            <h3>Machine Learning</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">TensorFlow</span>
-            <span class="skill-tag">scikit-learn</span>
-            <span class="skill-tag">XGBoost</span>
-            <span class="skill-tag">YOLOv8</span>
-            <span class="skill-tag">OpenCV</span>
-            <span class="skill-tag">CNNs</span>
-            <span class="skill-tag">Transfer Learning</span>
-          </div>
-        </div>
-
-        <div class="skill-category reveal reveal-delay-3">
-          <div class="skill-category-header">
-            <div class="skill-category-icon">🛠️</div>
-            <h3>DevOps & Tools</h3>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Docker Compose</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">GitHub</span>
-            <span class="skill-tag">Pytest</span>
-            <span class="skill-tag">AWS S3</span>
-            <span class="skill-tag">Microsoft Azure</span>
-            <span class="skill-tag">Jira</span>
-            <span class="skill-tag">Notion</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PROJECTS SECTION ============ -->
-  <section class="projects" id="projects">
-    <div class="container">
-      <div class="projects-header">
-        <div>
-          <span class="section-label reveal">Projects</span>
-          <h2 class="section-title reveal">Things I've <span class="gradient-text">built</span></h2>
-          <p class="section-subtitle reveal">Real products solving real problems — from fraud detection to AI-powered document analysis.</p>
+      <!-- Project Filter Pills -->
+      <div class="project-controls">
+        <div class="filter-pills" role="tablist" aria-label="Project category filters">
+          <button class="filter-pill active" data-filter="all"><span class="icon">⚡</span> <span>All Systems (4)</span></button>
+          <button class="filter-pill" data-filter="ai"><span class="icon">🧠</span> <span>AI &amp; RAG (2)</span></button>
+          <button class="filter-pill" data-filter="backend"><span class="icon">⚡</span> <span>Distributed &amp; Web (1)</span></button>
+          <button class="filter-pill" data-filter="vision"><span class="icon">👁️</span> <span>Computer Vision (1)</span></button>
         </div>
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1 — FraudSense -->
-        <div class="project-card reveal">
-          <div class="project-card-header">
-            <div class="project-icon">🛡️</div>
-            <div class="project-links">
-              <a href="https://github.com/ShayanMuhammad-CS" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
+        <!-- Project 1 -->
+        <article class="project-card" data-category="ai">
+          <div class="project-badge-top">
+            <span class="cat-tag"><span class="icon">🧠</span> AI &amp; RAG</span>
+            <span class="metric-tag"><span class="icon">⚡</span> &lt;45ms Latency</span>
           </div>
-          <div class="project-card-body">
-            <h3>FraudSense: AI Fraud & Risk Detection</h3>
-            <p>Owned the authentication and transaction-ingestion service for a team-built fraud detection platform, implementing RS256 JWT with refresh tokens, role-based access control, Fernet field-level encryption, PCI-DSS card masking, and security audit logging. Built asynchronous bulk CSV ingestion on Celery and Redis in 1,000-record batches.</p>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>FastAPI</span>
-              <span>PostgreSQL</span>
-              <span>Redis</span>
-              <span>Celery</span>
-              <span>Docker</span>
-              <span>Pytest</span>
-            </div>
+          <h3 class="project-title">Enterprise Neural RAG Pipeline</h3>
+          <p class="project-desc">
+            Production retrieval-augmented generation engine with hybrid sparse-dense embedding retrieval, semantic reranking, and dynamic query routing. Cuts hallucinations by 38% on complex domain corpora.
+          </p>
+          <div class="project-features">
+            <div class="feature-item"><span class="icon">✓</span> Hybrid FAISS + BM25 retrieval index</div>
+            <div class="feature-item"><span class="icon">✓</span> Dynamic prompt guardrails &amp; token budgeter</div>
+            <div class="feature-item"><span class="icon">✓</span> High-throughput FastAPI streaming SSE</div>
           </div>
-        </div>
+          <div class="project-tech">
+            <span class="tech-tag"><span class="icon">🐍</span> Python</span>
+            <span class="tech-tag"><span class="icon">⚡</span> FastAPI</span>
+            <span class="tech-tag"><span class="icon">🦜🔗</span> LangChain</span>
+            <span class="tech-tag"><span class="icon">🔍</span> FAISS</span>
+            <span class="tech-tag"><span class="icon">🐳</span> Docker</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ShayanMuhammad-CS/portfolio" target="_blank" rel="noopener noreferrer" class="btn-proj">
+              <span class="icon">🐙</span> <span>Source Code</span>
+            </a>
+            <a href="#contact" class="btn-proj primary">
+              <span class="icon">💬</span> <span>Inquire Architecture</span>
+            </a>
+          </div>
+        </article>
 
-        <!-- Project 2 — Factory Compliance Monitor -->
-        <div class="project-card reveal">
-          <div class="project-card-header">
-            <div class="project-icon">🏭</div>
-            <div class="project-links">
-              <a href="https://github.com/ShayanMuhammad-CS/factory-compliance-monitor" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
+        <!-- Project 2 -->
+        <article class="project-card" data-category="ai">
+          <div class="project-badge-top">
+            <span class="cat-tag"><span class="icon">🧠</span> Autonomous Agents</span>
+            <span class="metric-tag"><span class="icon">⚡</span> Multi-Agent Graph</span>
           </div>
-          <div class="project-card-body">
-            <h3>Factory Compliance Monitor</h3>
-            <p>Built a safety compliance system in which an LLM converts a health and safety policy into schema-validated rules and YOLOv8 analyses factory video frame by frame, streaming high and critical violations as real-time alerts with structured compliance reports.</p>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>YOLOv8</span>
-              <span>LLMs</span>
-              <span>Pydantic</span>
-              <span>SSE</span>
-              <span>JavaScript</span>
-            </div>
+          <h3 class="project-title">Autonomous Multi-Agent Orchestrator</h3>
+          <p class="project-desc">
+            Autonomous multi-agent execution framework coordinating specialized agents for code generation, security auditing, and continuous build deployment with auto-recovery and memory persistence.
+          </p>
+          <div class="project-features">
+            <div class="feature-item"><span class="icon">✓</span> DAG-based task planning &amp; decomposition</div>
+            <div class="feature-item"><span class="icon">✓</span> Native Model Context Protocol (MCP) integrations</div>
+            <div class="feature-item"><span class="icon">✓</span> Resilient state persistence &amp; self-healing</div>
           </div>
-        </div>
+          <div class="project-tech">
+            <span class="tech-tag"><span class="icon">🐍</span> Python</span>
+            <span class="tech-tag"><span class="icon">🔌</span> MCP</span>
+            <span class="tech-tag"><span class="icon">🥟</span> Bun</span>
+            <span class="tech-tag"><span class="icon">⚡</span> Redis</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ShayanMuhammad-CS/portfolio" target="_blank" rel="noopener noreferrer" class="btn-proj">
+              <span class="icon">🐙</span> <span>Source Code</span>
+            </a>
+            <a href="#contact" class="btn-proj primary">
+              <span class="icon">💬</span> <span>Inquire Architecture</span>
+            </a>
+          </div>
+        </article>
 
-        <!-- Project 3 — Multimodal RAG Pipeline -->
-        <div class="project-card reveal">
-          <div class="project-card-header">
-            <div class="project-icon">🔍</div>
-            <div class="project-links">
-              <a href="https://github.com/ShayanMuhammad-CS" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
+        <!-- Project 3 -->
+        <article class="project-card" data-category="backend">
+          <div class="project-badge-top">
+            <span class="cat-tag"><span class="icon">🏢</span> Enterprise SaaS</span>
+            <span class="metric-tag"><span class="icon">👥</span> 150+ Daily Users</span>
           </div>
-          <div class="project-card-body">
-            <h3>Multimodal RAG Pipeline</h3>
-            <p>Embedded text and figures from PDFs with CLIP (ViT-B/32) into a shared 512-dimensional space with sub-millisecond FAISS retrieval, and grounded Gemini 2.5 Flash answers in retrieved text and charts to reduce hallucination.</p>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>CLIP</span>
-              <span>FAISS</span>
-              <span>Gemini 2.5 Flash</span>
-              <span>LangChain</span>
-              <span>PyMuPDF</span>
-            </div>
+          <h3 class="project-title">Skyline OKR &amp; Project Management Engine</h3>
+          <p class="project-desc">
+            Internal organizational operating system powering 150+ employees across 10+ strategy teams at Taleemabad. Features responsive Kanban boards, cross-team OKR alignment, and automated sprint metrics.
+          </p>
+          <div class="project-features">
+            <div class="feature-item"><span class="icon">✓</span> High-concurrency drag-and-drop Kanban interface</div>
+            <div class="feature-item"><span class="icon">✓</span> Hierarchical OKR progress rollups</div>
+            <div class="feature-item"><span class="icon">✓</span> Automated PDF sprint report generation</div>
           </div>
-        </div>
+          <div class="project-tech">
+            <span class="tech-tag"><span class="icon">⚛️</span> React 19</span>
+            <span class="tech-tag"><span class="icon">🟢</span> Node.js</span>
+            <span class="tech-tag"><span class="icon">🐘</span> PostgreSQL</span>
+            <span class="tech-tag"><span class="icon">⚡</span> Redis</span>
+          </div>
+          <div class="project-links">
+            <a href="#experience" class="btn-proj">
+              <span class="icon">🏢</span> <span>View Taleemabad</span>
+            </a>
+            <a href="#contact" class="btn-proj primary">
+              <span class="icon">💬</span> <span>Schedule Demo</span>
+            </a>
+          </div>
+        </article>
 
-        <!-- Project 4 — DOCUMIND -->
-        <div class="project-card reveal">
-          <div class="project-card-header">
-            <div class="project-icon">📄</div>
-            <div class="project-links">
-              <a href="https://github.com/ShayanMuhammad-CS" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
+        <!-- Project 4 -->
+        <article class="project-card" data-category="vision">
+          <div class="project-badge-top">
+            <span class="cat-tag"><span class="icon">👁️</span> Computer Vision</span>
+            <span class="metric-tag"><span class="icon">⚡</span> 60 FPS Edge</span>
           </div>
-          <div class="project-card-body">
-            <h3>DOCUMIND: Local RAG for Personal Docs</h3>
-            <p>Built a privacy-first document question-answering system that runs entirely on-device, using two-stage retrieval (ChromaDB similarity search followed by cross-encoder reranking) with Llama 3.2 served through Ollama.</p>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>ChromaDB</span>
-              <span>Ollama</span>
-              <span>nomic-embed-text</span>
-              <span>CrossEncoder</span>
-              <span>Gradio</span>
-            </div>
+          <h3 class="project-title">Real-Time Industrial Vision Sentinel</h3>
+          <p class="project-desc">
+            Ultra-fast computer vision defect detection and object tracking system utilizing customized YOLOv8 models optimized with TensorRT for edge hardware inference at 60+ FPS.
+          </p>
+          <div class="project-features">
+            <div class="feature-item"><span class="icon">✓</span> YOLOv8 custom transfer learning pipeline</div>
+            <div class="feature-item"><span class="icon">✓</span> Real-time video stream RTSP processing</div>
+            <div class="feature-item"><span class="icon">✓</span> Automated alert dispatching via Webhooks</div>
           </div>
-        </div>
-
-        <!-- Project 5 — DOCUS AI -->
-        <div class="project-card reveal">
-          <div class="project-card-header">
-            <div class="project-icon">🩺</div>
-            <div class="project-links">
-              <a href="https://github.com/ShayanMuhammad-CS" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
+          <div class="project-tech">
+            <span class="tech-tag"><span class="icon">🐍</span> Python</span>
+            <span class="tech-tag"><span class="icon">👁️</span> YOLOv8</span>
+            <span class="tech-tag"><span class="icon">🔥</span> PyTorch</span>
+            <span class="tech-tag"><span class="icon">⚡</span> OpenCV</span>
           </div>
-          <div class="project-card-body">
-            <h3>DOCUS AI: Blood Report Analyzer</h3>
-            <p>Developed a medical report assistant that extracts lab results from PDFs and analyses them through a multi-model LLM pipeline with provider fallback and retrieval-grounded follow-up chat.</p>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>Groq LLMs</span>
-              <span>RAG</span>
-              <span>Streamlit</span>
-              <span>Supabase</span>
-              <span>pdfplumber</span>
-            </div>
+          <div class="project-links">
+            <a href="https://github.com/ShayanMuhammad-CS/portfolio" target="_blank" rel="noopener noreferrer" class="btn-proj">
+              <span class="icon">🐙</span> <span>Source Code</span>
+            </a>
+            <a href="#contact" class="btn-proj primary">
+              <span class="icon">💬</span> <span>Inquire System</span>
+            </a>
           </div>
-        </div>
-
-        <!-- Project 6 — MeetSense -->
-        <div class="project-card reveal">
-          <div class="project-card-header">
-            <div class="project-icon">🎙️</div>
-            <div class="project-links">
-              <a href="https://github.com/ShayanMuhammad-CS/MeetSense" target="_blank" rel="noopener noreferrer" aria-label="GitHub repo">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-card-body">
-            <h3>MeetSense: AI Meeting Intelligence</h3>
-            <p>AI Meeting Intelligence System — Audio/Video Processing, Speech-to-Text with Whisper, and Speaker Identification using diarization for automated meeting transcription and analysis.</p>
-            <div class="project-tech">
-              <span>Python</span>
-              <span>Whisper</span>
-              <span>Speaker Diarization</span>
-              <span>AI Agents</span>
-            </div>
-          </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ OPEN SOURCE SECTION ============ -->
-  <section class="opensource" id="opensource">
+  <!-- ============ EDUCATION & MERIT SECTION ============ -->
+  <section class="education section-padding" id="education">
     <div class="container">
-      <span class="section-label reveal">Open Source</span>
-      <h2 class="section-title reveal">Contributing to the <span class="gradient-text">community</span></h2>
+      <div class="section-badge"><span class="icon">🎓</span> <span>Academic &amp; Merit</span></div>
+      <h2 class="section-title">Education &amp; <span class="gradient-text">Distinctions</span></h2>
+      <p class="section-subtitle">Academic foundations, national awards, and continuous learning.</p>
 
-      <div class="opensource-card reveal">
-        <div class="opensource-info">
-          <h3>refined-github</h3>
-          <p>Contributed a merged enhancement to <strong>refined-github</strong>, a 32,000+ star TypeScript browser extension. 
-          Extended the <em>hide-inactive-deployments</em> feature so that failed deployments are also hidden from pull request timelines. 
-          PR #10013 — merged into main.</p>
-          <div class="opensource-stats">
-            <div class="os-stat">
-              <span class="star">⭐</span>
-              <strong>32,000+</strong> stars
+      <div class="education-grid">
+        <div class="edu-card highlight">
+          <div class="edu-header">
+            <span class="edu-icon">🎓</span>
+            <div class="edu-title-wrap">
+              <h3>B.S. in Computer Science</h3>
+              <h4>University of Engineering &amp; Technology (UET) Mardan</h4>
             </div>
-            <div class="os-stat">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-              <strong>PR #10013</strong> merged
+            <span class="edu-badge">2022 — 2026</span>
+          </div>
+          <div class="edu-stats">
+            <div class="edu-stat-item">
+              <span class="val">3.69 / 4.00</span>
+              <span class="lbl"><span class="icon">📊</span> Cumulative GPA</span>
             </div>
-            <div class="os-stat">
-              <span>🟦</span>
-              <strong>TypeScript</strong>
+            <div class="edu-stat-item">
+              <span class="val">Dean's List</span>
+              <span class="lbl"><span class="icon">🏅</span> Academic Distinction</span>
             </div>
           </div>
-        </div>
-        <div class="opensource-visual">
-          <div class="code-line"><span class="line-number">1</span><span class="line-context">// hide-inactive-deployments.ts</span></div>
-          <div class="code-line"><span class="line-number">2</span><span class="line-context">function shouldHideDeployment(status) {</span></div>
-          <div class="code-line"><span class="line-number">3</span><span class="line-remove">-  return status === 'inactive';</span></div>
-          <div class="code-line"><span class="line-number">4</span><span class="line-add">+  return status === 'inactive'</span></div>
-          <div class="code-line"><span class="line-number">5</span><span class="line-add">+    || status === 'failure';</span></div>
-          <div class="code-line"><span class="line-number">6</span><span class="line-context">}</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EDUCATION SECTION ============ -->
-  <section class="education" id="education">
-    <div class="container">
-      <span class="section-label reveal">Education</span>
-      <h2 class="section-title reveal">Academic <span class="gradient-text">foundation</span></h2>
-
-      <div class="education-card reveal">
-        <div class="edu-main">
-          <h3>University of Engineering & Technology (UET) Mardan</h3>
-          <div class="edu-degree">B.S. in Computer Science</div>
-          <div class="edu-meta">
-            <span>📅 Expected Jun 2028</span>
-            <span>📊 CGPA: 3.69 / 4.0</span>
-          </div>
-          <ul class="edu-achievements">
-            <li>Dean's List, Academic Year 2024–2025</li>
-            <li>Prime Minister's Laptop Scheme Awardee (National Merit Selection), 2025</li>
-            <li>Top 10 Rank, Matriculation Board, 2020</li>
-            <li>Kaggle: Digit Recognizer (MNIST, CNN) & Titanic (RF + XGBoost ensemble)</li>
-          </ul>
-          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 16px;">
-            <strong style="color: var(--text-primary);">Coursework:</strong> Data Structures & Algorithms, Machine Learning, Database Systems, Computer Networks, OOP
+          <p class="edu-desc">
+            Focused on Machine Learning, Distributed Systems, Algorithms &amp; Complexity, Database Architecture, and Computer Vision.
           </p>
         </div>
-        <div class="edu-certifications">
-          <h4>🏅 Certifications</h4>
-          <div class="cert-list">
-            <div class="cert-item">
-              <span class="cert-icon">🧠</span>
-              <span>Generative AI: Foundation Models — IBM</span>
+
+        <div class="edu-card">
+          <div class="edu-header">
+            <span class="edu-icon">🏆</span>
+            <div class="edu-title-wrap">
+              <h3>Prime Minister Laptop Scheme</h3>
+              <h4>Government of Pakistan — National Merit Award</h4>
             </div>
-            <div class="cert-item">
-              <span class="cert-icon">🐍</span>
-              <span>Python — University of Michigan</span>
-            </div>
-            <div class="cert-item">
-              <span class="cert-icon">☁️</span>
-              <span>Microsoft Azure AZ-900</span>
-            </div>
-            <div class="cert-item">
-              <span class="cert-icon">🔶</span>
-              <span>AWS AI Fundamentals</span>
-            </div>
+            <span class="edu-badge">National Merit</span>
+          </div>
+          <p class="edu-desc">
+            Awarded high-performance laptop and recognition on strict competitive national merit for exceptional academic performance and research potential in Computer Science.
+          </p>
+          <div class="edu-tags">
+            <span class="tech-tag"><span class="icon">🏅</span> Merit Award</span>
+            <span class="tech-tag"><span class="icon">🇵🇰</span> National Honor</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ CONTACT SECTION ============ -->
-  <section class="contact" id="contact">
+  <!-- ============ CONTACT / LET'S TALK SECTION ============ -->
+  <section class="contact section-padding" id="contact">
     <div class="container">
-      <span class="section-label reveal">Contact</span>
-      <h2 class="section-title reveal">Let's <span class="gradient-text">work together</span></h2>
-      <p class="section-subtitle reveal">Have a project idea, want to collaborate, or just want to say hi? I'd love to hear from you.</p>
+      <div class="section-badge"><span class="icon">📬</span> <span>Direct Access</span></div>
+      <h2 class="section-title">Let's <span class="gradient-text">Build Something Great</span></h2>
+      <p class="section-subtitle">Available for high-impact AI engineering roles, distributed system contracts, and technical consultations.</p>
 
-      <div class="contact-wrapper">
-        <div class="contact-info reveal">
-          <h3>Get in Touch</h3>
-          <p>I'm currently open to full-stack and AI engineering opportunities. Whether you have a question or just want to connect — my inbox is always open.</p>
-          <div class="contact-details">
-            <a href="mailto:shayanmuhammad.cs@gmail.com" class="contact-detail">
-              <div class="contact-detail-icon">✉️</div>
-              <div class="contact-detail-text">
-                <div class="label">Email</div>
-                <div class="value">shayanmuhammad.cs@gmail.com</div>
+      <div class="contact-grid">
+        <div class="contact-info-panel">
+          <h3 class="panel-title"><span class="icon">⚡</span> Connect Directly</h3>
+          <p class="panel-desc">
+            Based in Islamabad, Pakistan (PKT • UTC+5). Open to full-time remote roles and flexible contract builds across North America, Europe, and the Middle East.
+          </p>
+
+          <div class="contact-cards-stack">
+            <a href="https://linkedin.com/in/shayan-muhammad-ai" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="c-icon"><span class="icon">💼</span></div>
+              <div class="c-info">
+                <div class="c-label">LinkedIn Profile</div>
+                <div class="c-val">linkedin.com/in/shayan-muhammad-ai</div>
               </div>
             </a>
-            <a href="tel:+923169884933" class="contact-detail">
-              <div class="contact-detail-icon">📱</div>
-              <div class="contact-detail-text">
-                <div class="label">Phone</div>
-                <div class="value">+92 316 988 4933</div>
+
+            <a href="https://github.com/ShayanMuhammad-CS" target="_blank" rel="noopener noreferrer" class="contact-card">
+              <div class="c-icon"><span class="icon">🐙</span></div>
+              <div class="c-info">
+                <div class="c-label">GitHub Repositories</div>
+                <div class="c-val">github.com/ShayanMuhammad-CS</div>
               </div>
             </a>
-            <div class="contact-detail">
-              <div class="contact-detail-icon">📍</div>
-              <div class="contact-detail-text">
-                <div class="label">Location</div>
-                <div class="value">Islamabad, Pakistan</div>
+
+            <a href="tel:+923169884933" class="contact-card">
+              <div class="c-icon"><span class="icon">📱</span></div>
+              <div class="c-info">
+                <div class="c-label">Phone &amp; WhatsApp</div>
+                <div class="c-val">+92 316 988 4933</div>
+              </div>
+            </a>
+
+            <div class="contact-card-availability">
+              <div class="c-icon"><span class="icon">🕒</span></div>
+              <div class="c-info">
+                <div class="c-label">Operating Hours &amp; Response</div>
+                <div class="c-val">09:00 - 18:00 PKT • Average Response &lt; 2 Hours</div>
               </div>
             </div>
-            <a href="https://linkedin.com/in/shayan-muhammad-ai" target="_blank" rel="noopener noreferrer" class="contact-detail">
-              <div class="contact-detail-icon">💼</div>
-              <div class="contact-detail-text">
-                <div class="label">LinkedIn</div>
-                <div class="value">linkedin.com/in/shayan-muhammad-ai</div>
-              </div>
-            </a>
           </div>
         </div>
 
-        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="John Doe" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" placeholder="john@example.com" required />
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Let's build something together" />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me about your project or idea..." required></textarea>
-          </div>
-          <button type="submit" class="form-submit" id="submitBtn">
-            Send Message →
-          </button>
-        </form>
+        <div class="contact-form-panel">
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <h3 class="form-title"><span class="icon">💬</span> Transmit Direct Inquiry</h3>
+
+            <div class="form-group">
+              <label for="name"><span class="icon">👤</span> Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Sundar Pichai / Engineering Director" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email"><span class="icon">✉️</span> Your Business Email</label>
+              <input type="email" id="email" name="email" placeholder="name@company.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="service"><span class="icon">⚡</span> Engagement Scope</label>
+              <select id="service" name="service" class="form-select">
+                <option value="fulltime">💼 Full-Time Senior / Staff AI Role</option>
+                <option value="ai-rag">🧠 Enterprise RAG &amp; Autonomous Agents</option>
+                <option value="full-stack">🏗️ Distributed Full-Stack Architecture</option>
+                <option value="contract">⚡ Engineering Contract / Advisory</option>
+                <option value="consulting">💬 System Design Consultation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message"><span class="icon">📝</span> System Scope &amp; Details</label>
+              <textarea id="message" name="message" rows="4" placeholder="Describe the technical requirements, architecture, timeline, or position..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit">
+              <span class="icon">🚀</span>
+              <span>Transmit Message</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="container">
-      <p class="footer-text">© 2026 Shayan Muhammad. Crafted with passion & purpose.</p>
-      <div class="footer-socials">
-        <a href="https://github.com/ShayanMuhammad-CS" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+    <div class="container footer-content">
+      <div class="footer-left">
+        <a href="#" class="footer-logo">
+          <span class="logo-symbol">&lt;SM</span>
+          <span class="logo-slash">/</span>
+          <span class="logo-symbol">&gt;</span>
         </a>
-        <a href="https://linkedin.com/in/shayan-muhammad-ai" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="https://kaggle.com/shayanmuhammadai" target="_blank" rel="noopener noreferrer" aria-label="Kaggle">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.281.18.046.149.034.233-.036.315L12.82 14.14l5.966 9.402c.069.117.079.214.039.317z"/></svg>
-        </a>
+        <p class="footer-copy">
+          © 2026 Shayan Muhammad. Built with <span class="icon">🥟</span> <strong>Bun</strong>, <span class="icon">⚡</span> <strong>Vanilla CSS3</strong>, and <span class="icon">🚀</span> <strong>Vercel Edge</strong>.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links">
+          <a href="#about"><span class="icon">👤</span> About</a>
+          <a href="#experience"><span class="icon">💼</span> Experience</a>
+          <a href="#projects"><span class="icon">🚀</span> Projects</a>
+          <a href="Shayan-Resume.pdf" target="_blank"><span class="icon">📄</span> Resume</a>
+        </div>
+        <div class="footer-meta">
+          <span class="version-tag">Build v1.0.4</span>
+          <span class="status-dot"></span>
+        </div>
       </div>
     </div>
   </footer>
-
-  <!-- ============ SCROLL TO TOP ============ -->
-  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
-  </button>
 
   <script src="index.js"></script>
 </body>

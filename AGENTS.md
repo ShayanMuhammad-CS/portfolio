@@ -24,6 +24,20 @@ Before answering or modifying any code in a new chat:
    - Propose commands, verify outputs, fix any unexpected errors dynamically, and complete the solution without manual handholding.
 3. **Preserve Compatibility:**
    - Keep Vercel edge deployment zero-config (`vercel.json`) compatible while utilizing Bun for fast local builds.
+4. **Proactive Dependency & Tool Resolution (Never Halt on Missing Tools):**
+   - When a required tool, browser driver, runtime, or package is missing (e.g. Playwright, Chromium, CLI utilities, npm libraries), **NEVER stop or treat it as a dead-end**.
+   - Autonomously download and install it immediately (`bunx playwright install chromium`, `bun add -d <pkg>`, etc.) and proceed with execution. That is not a big deal.
+5. **Manager Agent & Distributed Deeds Architecture:**
+   - Act as an orchestrating **Manager Agent**.
+   - Whenever executing a feature, bug fix, or refactor, break the workload into explicit **Deeds**:
+     - 🎨 **Frontend Specialist Deed**: UI/UX, responsive layout, tokens, micro-interactions.
+     - ⚡ **Backend & Build Specialist Deed**: Runtime, server, build scripts, manifest, deployments.
+     - 🛡️ **QA & Security Reviewer Deed**: Asset integrity, privacy audit, anchor/link verification.
+   - Maintain an explicit internal task list of:
+     - **Done Deeds** (Verified completions)
+     - **In-Flight Deeds** (Current action)
+     - **Pending Deeds** (Upcoming roadmap)
+   - Ensure these specialized roles cross-communicate and align before the Manager certifies the build.
 
 ---
 

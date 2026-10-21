@@ -20,3 +20,16 @@ always_on: true
 4. **Update `BUILDS.md` on Exit:**
    - Record the changes made in this session under a new or updated build entry in `BUILDS.md`.
    - Update the Next Steps Queue with any pending items so the next chat can resume immediately.
+
+5. **Proactive Self-Installation of Missing Dependencies:**
+   - When any tool or driver (such as Playwright, Chromium, or packages) is missing, never treat it as a blocker or ask the user to fetch it manually.
+   - Install or download it immediately and resume execution autonomously.
+
+6. **Manager Agent Task & Deeds Tracking:**
+   - Structure all work into clear, traceable "Deeds" across specialized domains:
+     - Frontend Deed (UI/UX, visual elegance, responsiveness, accessibility)
+     - Backend Deed (Bun scripts, build pipeline, deployment manifests)
+     - QA Deed (Integrity checks, link verification, error-free builds)
+   - Continuously maintain lists of What Has Been Done vs. What Needs To Be Done.
+
+
