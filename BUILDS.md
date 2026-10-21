@@ -11,16 +11,31 @@
 
 | Attribute | Current Value |
 | :--- | :--- |
-| **Current Build Version** | `v1.0.1` |
+| **Current Build Version** | `v1.0.2` |
 | **Status** | 🟢 Healthy / Production Ready & Verified |
 | **Last Updated** | 2026-10-22 |
 | **Primary Runtime** | Bun 1.4.0 (Windows Native) |
 | **Deployment Target** | Vercel Edge (`vercel.json`) |
+| **GitHub Repository** | `https://github.com/ShayanMuhammad-CS/portfolio` |
 | **Local Dev URL** | `http://localhost:3000` (`bun run dev`) |
 
 ---
 
 ## 📋 Build History & Session Log
+
+### [Build v1.0.2] — GitHub Remote Sync & Vercel Deployment Initialization
+* **Date:** 2026-10-22
+* **Author:** Antigravity Pair Programmer
+* **Key Achievements:**
+  - Initialized and published remote GitHub repository: `https://github.com/ShayanMuhammad-CS/portfolio` via GitHub CLI (`gh`).
+  - Synced main branch upstream with build pipeline, state persistence files, and MCP configs.
+  - Triggered Vercel CLI OAuth device login handshake (`https://vercel.com/oauth/device?user_code=FJRT-MXVH`).
+  - Validated build integrity with `bun run build:bump` (Exit code: 0).
+* **Files Modified:**
+  - `build-manifest.json`
+  - `BUILDS.md`
+
+---
 
 ### [Build v1.0.1] — Build Pipeline, Agent Continuity & Reflection System
 * **Date:** 2026-10-22
