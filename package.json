@@ -1,0 +1,23 @@
+{
+  "name": "shayan-portfolio",
+  "version": "1.0.0",
+  "description": "Shayan Muhammad — Full-Stack AI Engineer Portfolio Website",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run scripts/dev.js",
+    "start": "bun run scripts/dev.js",
+    "build": "bun run scripts/build.js",
+    "build:bump": "bun run scripts/build.js --bump",
+    "check": "bun run scripts/build.js"
+  },
+  "keywords": [
+    "portfolio",
+    "ai-engineer",
+    "rag",
+    "agentic-ai",
+    "bun"
+  ],
+  "author": "Shayan Muhammad",
+  "license": "MIT"
+}

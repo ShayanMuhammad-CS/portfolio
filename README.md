@@ -6,15 +6,20 @@ A high-performance, dark-themed developer portfolio crafted with vanilla HTML5, 
 
 ---
 
-## 🚀 Live Preview Locally
+## 🚀 Quick Start & Build Commands
 
-The site is currently hosted locally using:
+This project uses **[Bun](https://bun.sh)** for instant local serving and build verification:
 
 ```bash
-npx serve . -l 3000
-```
+# Start local development server (http://localhost:3000)
+bun run dev
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+# Run build integrity & link verification check
+bun run build
+
+# Bump build patch version
+bun run build:bump
+```
 
 ---
 
@@ -22,13 +27,24 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ```text
 portfolio/
-├── index.html          # Main HTML structure with semantic sections
-├── index.css           # Design system tokens, glassmorphism, animations
-├── index.js            # Particle canvas, typing effect, scroll reveals, counters
-├── vercel.json         # Vercel deployment & routing configuration
-├── Shayan-Resume.pdf   # Direct CV download file
-├── profile.jpg         # Profile picture placeholder (replace with your photo!)
-└── README.md           # Documentation & deployment guide
+├── index.html              # Main HTML structure with semantic sections
+├── index.css               # Design system tokens, glassmorphism, animations
+├── index.js                # Particle canvas, typing effect, scroll reveals, counters
+├── package.json            # Bun build and dev scripts
+├── vercel.json             # Vercel edge deployment & caching configuration
+├── Shayan-Resume.pdf       # Direct CV download file
+├── profile.jpg             # Profile picture placeholder (replace with your photo!)
+├── BUILDS.md               # Continuous build ledger & session handoff queue
+├── AGENTS.md               # AI agent operational contract & auto-mode rules
+├── AGENT_REFLECTION.md     # Agent self-critique, root causes & improvements
+├── build-manifest.json     # Auto-generated build hash & verification stamp
+├── scripts/
+│   ├── build.js            # Build validator & integrity checker
+│   └── dev.js              # Native Bun static dev server
+└── .agents/
+    ├── mcp_config.json     # Model Context Protocol tools configuration
+    └── rules/
+        └── continuity.md   # Automatic session continuity rule
 ```
 
 ---

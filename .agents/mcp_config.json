@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "fetch": {
+      "command": "bunx",
+      "args": ["-y", "@modelcontextprotocol/server-everything"],
+      "description": "Model Context Protocol utility server for data fetching and testing"
+    },
+    "git": {
+      "command": "bunx",
+      "args": ["-y", "mcp-server-git", "--repository", "."],
+      "description": "Git repository inspection and history tracker"
+    },
+    "airview-bridge": {
+      "serverUrl": "http://localhost:8080/sse",
+      "description": "SSE endpoint bridge for external tools, visual inspectors, and custom telemetry (e.g. Airview / Live inspection)"
+    }
+  }
+}
