@@ -7,12 +7,20 @@ const buildsPath = path.join(rootDir, "BUILDS.md");
 
 console.log("\n⚡ Starting Portfolio Build & Integrity Verification...\n");
 
-// 1. Required Files Check
+// 1. Required Core & Modular Files Check
 const requiredFiles = [
   "index.html",
   "index.css",
   "index.js",
+  "js/modules/particles.js",
+  "js/modules/clock.js",
+  "js/modules/typing.js",
+  "js/modules/dropdown.js",
+  "js/modules/project-filter.js",
+  "js/modules/counters.js",
+  "js/modules/navigation.js",
   "profile.jpg",
+  "profile.png",
   "Shayan-Resume.pdf",
   "vercel.json",
   "README.md",
@@ -21,20 +29,36 @@ const requiredFiles = [
 ];
 
 let hasErrors = false;
-console.log("🔍 Checking core project files:");
+console.log("🔍 Checking core project files and modular architecture:");
 for (const file of requiredFiles) {
   const fullPath = path.join(rootDir, file);
   if (fs.existsSync(fullPath)) {
     const stats = fs.statSync(fullPath);
     const sizeKb = (stats.size / 1024).toFixed(1);
-    console.log(`  ✓ ${file.padEnd(20)} (${sizeKb} KB)`);
+    console.log(`  ✓ ${file.padEnd(30)} (${sizeKb} KB)`);
   } else {
     console.error(`  ✗ Missing required file: ${file}`);
     hasErrors = true;
   }
 }
 
-// 2. Validate HTML asset references & anchors
+// 2. Validate ES Module Imports in index.js
+console.log("\n📦 Validating ES module dependencies in index.js:");
+const indexJsContent = fs.readFileSync(path.join(rootDir, "index.js"), "utf8");
+const importRegex = /import\s+.*?\s+from\s+['"]([^'"]+)['"]/g;
+let importMatch;
+while ((importMatch = importRegex.exec(indexJsContent)) !== null) {
+  const importRelPath = importMatch[1];
+  const resolvedPath = path.join(rootDir, importRelPath);
+  if (fs.existsSync(resolvedPath)) {
+    console.log(`  ✓ ES Module resolved: ${importRelPath}`);
+  } else {
+    console.error(`  ✗ Broken ES Module import: ${importRelPath}`);
+    hasErrors = true;
+  }
+}
+
+// 3. Validate HTML asset references & anchors
 console.log("\n🔗 Validating index.html asset references & internal anchors:");
 const htmlContent = fs.readFileSync(path.join(rootDir, "index.html"), "utf8");
 
@@ -75,7 +99,7 @@ while ((match = anchorRegex.exec(htmlContent)) !== null) {
   }
 }
 
-// 3. Update build manifest
+// 4. Update build manifest
 let currentBuildNumber = "1.0.0";
 if (fs.existsSync(manifestPath)) {
   try {

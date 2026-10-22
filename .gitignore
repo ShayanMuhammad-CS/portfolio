@@ -25,4 +25,7 @@ yarn-error.log*
 *.swp
 *.swo
 
-.vercel
+# Playwright browsers
+.playwright-browsers/
+scripts/scrape-*.js
+

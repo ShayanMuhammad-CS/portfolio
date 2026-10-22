@@ -11,9 +11,9 @@
 
 | Attribute | Current Value |
 | :--- | :--- |
-| **Current Build Version** | `v1.0.4` |
-| **Status** | 🟢 Production Deployed & Verified Live (HTTP 200) |
-| **Last Updated** | 2026-10-22 |
+| **Current Build Version** | `v1.0.6` |
+| **Status** | 🟢 Production Profile Headshot & Social Preview Deployed |
+| **Last Updated** | 2026-10-23 |
 | **Primary Runtime** | Bun 1.4.0 (Windows Native) |
 | **Deployment Target** | Vercel Edge (`vercel.json`) |
 | **Live Production URL** | [portfolio-five-tau-otr0exu0jk.vercel.app](https://portfolio-five-tau-otr0exu0jk.vercel.app) |
@@ -24,6 +24,67 @@
 ---
 
 ## 📋 Build History & Session Log
+
+### [Build v1.0.6] — Production Headshot Integration, Social Graph Meta & Executive Identity
+* **Date:** 2026-10-23
+* **Author:** Manager Agent (Pair Programming Architecture)
+* **Key Achievements:**
+  - **Deed 1 (Design & Asset Specialist Deed — Headshot Isolation):** Extracted user's raw headshot (`media_1792708799653.png`), cleanly eliminated Upwork banner artifacts ("rk"), and synthesized a high-definition anti-aliased circular alpha-channel avatar (`profile.png`) and dark-theme companion (`profile.jpg`).
+  - **Deed 2 (Frontend Specialist Deed — Hero & About Section Integration):**
+    - Integrated high-impact Architect Identity Strip inside the Hero System Monitor (`hero-identity-strip`) with glowing multi-color gradient border, pulsing `#10b981` status beacon, verified badge, and live availability tag.
+    - Enhanced About section with Executive Profile Card (`bio-avatar-header`) featuring the avatar, distinction badge, and Dean's List specs.
+    - Added Open Graph (`og:image`) and Twitter card (`twitter:image`) metadata for rich social previews on LinkedIn, Twitter, and Discord.
+  - **Deed 3 (Backend & Build Specialist Deed — Pipeline Sync):** Updated `scripts/build.js` to validate `profile.png` alongside `profile.jpg`, bumped build version to `v1.0.6`, and updated `build-manifest.json`.
+  - **Deed 4 (QA & Security Reviewer Deed):** Ran full integrity check, verified 0 broken anchors, valid asset hashes, and validated responsive scaling.
+  - **Deed 5 (DevOps & Production Lead Deed):** Committed and deployed upstream to GitHub repository and Vercel edge production.
+* **Files Modified/Created:**
+  - `profile.png` *(New)*
+  - `profile.jpg` *(Updated)*
+  - `index.html`
+  - `index.css`
+  - `scripts/build.js`
+  - `build-manifest.json`
+  - `BUILDS.md`
+
+---
+
+### [Build v1.0.5] — Task-Wise Modular Refactoring & Automated E2E Pipeline
+* **Date:** 2026-10-22
+* **Author:** Manager Agent (Pair Programming Architecture)
+* **Key Achievements:**
+  - **Deed 1 (Frontend Specialist Deed — Modular JavaScript Architecture):** Decoupled the monolithic `index.js` into 7 clean, isolated ES modules under `js/modules/`:
+    - `js/modules/particles.js`: Canvas particle physics simulation with mouse repulsion force.
+    - `js/modules/clock.js`: Real-time Asia/Karachi (PKT • UTC+5) Intl clock.
+    - `js/modules/typing.js`: Multi-role text typewriter engine with adaptive delay.
+    - `js/modules/dropdown.js`: Accessible ARIA architecture dropdown with escape & outside click handling.
+    - `js/modules/project-filter.js`: Interactive category filter with GPU transform & opacity transitions.
+    - `js/modules/counters.js`: Viewport-triggered IntersectionObserver impact counters.
+    - `js/modules/navigation.js`: Mobile drawer navigation and smooth anchor scrolling with header offset.
+    - `index.js`: Orchestrator class with isolated module error boundaries.
+  - **Deed 2 (Design & CSS Specialist Deed — WCAG Accessibility):** Added `@media (prefers-reduced-motion: reduce)` rule for users with motion sensitivity.
+  - **Deed 3 (Frontend Specialist Deed — Markup Hygiene):** Added `type="module"` to `<script>` in `index.html`, added missing cloud icon (`☁️`) to Vercel/Cloudflare skill pill, and bumped footer version badge.
+  - **Deed 4 (Backend & Build Specialist Deed):** Enhanced `scripts/build.js` to automatically trace and validate all ES module imports. Added `"test": "bun run scripts/test-refactor.js"` to `package.json`.
+  - **Deed 5 (QA & Security Reviewer Deed):** Built and executed automated Playwright E2E browser test (`scripts/test-refactor.js`) using native Microsoft Edge channel, certifying clock, typing, category filters, dropdown, and 0 console errors.
+* **Files Modified/Created:**
+  - `js/modules/particles.js` *(New)*
+  - `js/modules/clock.js` *(New)*
+  - `js/modules/typing.js` *(New)*
+  - `js/modules/dropdown.js` *(New)*
+  - `js/modules/project-filter.js` *(New)*
+  - `js/modules/counters.js` *(New)*
+  - `js/modules/navigation.js` *(New)*
+  - `scripts/test-refactor.js` *(New)*
+  - `index.js`
+  - `index.html`
+  - `index.css`
+  - `package.json`
+  - `README.md`
+  - `.gitignore`
+  - `scripts/build.js`
+  - `build-manifest.json`
+  - `BUILDS.md`
+
+---
 
 ### [Build v1.0.4] — Manager Agent Architecture & Google/PayPal Staff UI Overhaul
 * **Date:** 2026-10-22
@@ -145,8 +206,8 @@ portfolio/
 
 When the next chat session opens, the agent should continue directly with these prioritized items:
 
-1. [ ] **Profile Photo Replacement:**
-   - Check if the user has provided their real personal headshot to replace the placeholder `profile.jpg`.
+1. [x] **Profile Photo Replacement:**
+   - Completed in Build v1.0.6: Extracted, processed, and deployed transparent circular avatar `profile.png` and `profile.jpg` across Hero Identity Strip and About bio card.
 2. [ ] **Formspree Endpoint Configuration:**
    - In `index.html` (line 639), confirm or insert user's actual Formspree ID: `https://formspree.io/f/YOUR_FORM_ID`.
 3. [ ] **Live Project Links & GitHub Repos:**

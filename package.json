@@ -9,7 +9,8 @@
     "start": "bun run scripts/dev.js",
     "build": "bun run scripts/build.js",
     "build:bump": "bun run scripts/build.js --bump",
-    "check": "bun run scripts/build.js"
+    "check": "bun run scripts/build.js",
+    "test": "bun run scripts/test-refactor.js"
   },
   "keywords": [
     "portfolio",

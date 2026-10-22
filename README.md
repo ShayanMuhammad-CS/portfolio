@@ -18,6 +18,9 @@ bun run dev
 # Run build integrity & link verification check
 bun run build
 
+# Run automated Playwright E2E verification test
+bun run test
+
 # Bump build patch version
 bun run build:bump
 ```
@@ -30,18 +33,28 @@ bun run build:bump
 portfolio/
 ├── index.html              # Main HTML structure with semantic sections
 ├── index.css               # Design system tokens, glassmorphism, animations
-├── index.js                # Particle canvas, typing effect, scroll reveals, counters
-├── package.json            # Bun build and dev scripts
+├── index.js                # Core orchestrator importing ES modules
+├── js/
+│   └── modules/            # Decoupled ES Modules
+│       ├── particles.js    # Canvas particle physics engine
+│       ├── clock.js        # Live Islamabad (PKT • UTC+5) clock
+│       ├── typing.js       # Multi-role typewriter effect
+│       ├── dropdown.js     # Accessible category navigation menu
+│       ├── project-filter.js # Interactive project category filter tabs
+│       ├── counters.js     # IntersectionObserver numeric impact counters
+│       └── navigation.js   # Mobile drawer & smooth anchor scrolling
+├── package.json            # Bun build, dev, and test scripts
 ├── vercel.json             # Vercel edge deployment & caching configuration
 ├── Shayan-Resume.pdf       # Direct CV download file
-├── profile.jpg             # Profile picture placeholder (replace with your photo!)
+├── profile.jpg             # Profile picture asset
 ├── BUILDS.md               # Continuous build ledger & session handoff queue
 ├── AGENTS.md               # AI agent operational contract & auto-mode rules
 ├── AGENT_REFLECTION.md     # Agent self-critique, root causes & improvements
 ├── build-manifest.json     # Auto-generated build hash & verification stamp
 ├── scripts/
 │   ├── build.js            # Build validator & integrity checker
-│   └── dev.js              # Native Bun static dev server
+│   ├── dev.js              # Native Bun static dev server
+│   └── test-refactor.js    # Playwright automated E2E test suite
 └── .agents/
     ├── mcp_config.json     # Model Context Protocol tools configuration
     └── rules/
