@@ -61,8 +61,8 @@ export class ParticleEngine {
         size: Math.random() * 2 + 0.6,
         speedX: (Math.random() - 0.5) * 0.45,
         speedY: (Math.random() - 0.5) * 0.45,
-        color: Math.random() > 0.5 ? 'rgba(0, 242, 254, ' : 'rgba(99, 102, 241, ',
-        opacity: Math.random() * 0.4 + 0.15
+        color: Math.random() > 0.5 ? 'rgba(124, 58, 237, ' : 'rgba(99, 102, 241, ',
+        opacity: Math.random() * 0.35 + 0.1
       });
     }
   }
@@ -107,7 +107,7 @@ export class ParticleEngine {
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < 130) {
           const opacity = (1 - dist / 130) * 0.12;
-          ctx.strokeStyle = `rgba(0, 242, 254, ${opacity})`;
+          ctx.strokeStyle = `rgba(124, 58, 237, ${opacity})`;
           ctx.lineWidth = 0.5;
           ctx.beginPath();
           ctx.moveTo(pA.x, pA.y);
