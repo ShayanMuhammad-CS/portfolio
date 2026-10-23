@@ -105,4 +105,22 @@ Monolithic client-side scripts (`index.js`) bundle too many concerns (particles,
 3. **WCAG 2.2 Accessible Motion:**
    - Incorporated `@media (prefers-reduced-motion: reduce)` both in CSS and JS engines to ensure smooth, respectful experiences for users with vestibular sensitivities.
 
+---
+
+## 6. The 5-a-Side Champions League Agent Squad Paradigm (Build v1.0.8)
+
+> **"A football team wins because each player has high positional discipline, precise passing triangles, and mutual trust."**
+
+### Tactical Breakthrough:
+Instead of abstract "Frontend" and "Backend" labels, mapping multi-agent systems (MAS) to a world-class **5-a-side football squad** creates immediate clarity in role delegation, performance standards, and zero-loss handoffs:
+1. **⚡ Lamine Yamal (`yamal-ui` / Winger):** Dazzling aesthetic flair, electric purple tokens, fluid physics, modern glassmorphism.
+2. **🚀 Kylian Mbappé (`mbappe-ux` / Striker):** Sub-second page speed, recruitment conversion funnel, direct WhatsApp/Email CTAs.
+3. **🛡️ Rodri (`rodri-backend` / Midfield Anchor & Captain):** Bun build validator, manifest synchronization, modular ES modules, Vercel Edge caching.
+4. **🎯 Pedri (`pedri-qa` / Playmaker & Bug Hunter):** Zero console errors, broken link elimination, resilient offline client routing for contact submissions.
+5. **🧤 Thibaut Courtois (`courtois-guardian` / Goalkeeper):** Privacy shielding, OpenGraph social graph cards, Vercel HTTP security headers (`nosniff`, `DENY`).
+
+### Verification Command:
+With `"squad": "bun run scripts/squad-check.js"` in `package.json`, any agent entering the codebase can run a full pre-match squad inspection in under 1 second to certify that all 5 player domains remain in championship condition.
+
+
 
