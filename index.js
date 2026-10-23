@@ -13,6 +13,7 @@ import { DropdownMenu } from './js/modules/dropdown.js';
 import { ProjectFilter } from './js/modules/project-filter.js';
 import { MetricCounters } from './js/modules/counters.js';
 import { Navigation } from './js/modules/navigation.js';
+import { ContactFormHandler } from './js/modules/contact.js';
 
 export class PortfolioApp {
   constructor() {
@@ -75,6 +76,13 @@ export class PortfolioApp {
       this.modules.navigation = new Navigation();
     } catch (err) {
       console.warn('[Portfolio] Navigation module init warning:', err);
+    }
+
+    // 8. Contact Form Asynchronous Handler
+    try {
+      this.modules.contact = new ContactFormHandler('contactForm');
+    } catch (err) {
+      console.warn('[Portfolio] Contact module init warning:', err);
     }
   }
 }

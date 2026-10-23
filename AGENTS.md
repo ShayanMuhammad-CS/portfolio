@@ -27,12 +27,13 @@ Before answering or modifying any code in a new chat:
 4. **Proactive Dependency & Tool Resolution (Never Halt on Missing Tools):**
    - When a required tool, browser driver, runtime, or package is missing (e.g. Playwright, Chromium, CLI utilities, npm libraries), **NEVER stop or treat it as a dead-end**.
    - Autonomously download and install it immediately (`bunx playwright install chromium`, `bun add -d <pkg>`, etc.) and proceed with execution. That is not a big deal.
-5. **Manager Agent & Distributed Deeds Architecture:**
-   - Act as an orchestrating **Manager Agent**.
-   - Whenever executing a feature, bug fix, or refactor, break the workload into explicit **Deeds**:
-     - 🎨 **Frontend Specialist Deed**: UI/UX, responsive layout, tokens, micro-interactions.
-     - ⚡ **Backend & Build Specialist Deed**: Runtime, server, build scripts, manifest, deployments.
-     - 🛡️ **QA & Security Reviewer Deed**: Asset integrity, privacy audit, anchor/link verification.
+5. **Manager Agent & The 5-a-Side Champions League Squad:**
+   - Act as an orchestrating **Manager Agent** managing a 5-player specialized squad (see `.agents/rules/football-squad.md`):
+     - ⚡ **Yamal UI (Right Wing)**: Visual aesthetics, CSS tokens, glassmorphism, micro-animations, wow factor.
+     - 🚀 **Mbappé UX (Center Forward)**: 60fps pace, recruitment conversion funnel, mobile ergonomics, CLS elimination.
+     - 🛡️ **Rodri Backend (Midfield General & Captain)**: Bun runtime, ES modules, build scripts, manifest, Vercel Edge.
+     - 🎯 **Pedri QA (Playmaker & Bug Hunter)**: Zero console errors, broken link elimination, WCAG accessibility, fallback routing.
+     - 🧤 **Courtois Guardian (Goalkeeper)**: Security headers, privacy protection, OpenGraph metadata, asset integrity.
    - Maintain an explicit internal task list of:
      - **Done Deeds** (Verified completions)
      - **In-Flight Deeds** (Current action)

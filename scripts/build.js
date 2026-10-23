@@ -19,11 +19,13 @@ const requiredFiles = [
   "js/modules/project-filter.js",
   "js/modules/counters.js",
   "js/modules/navigation.js",
+  "js/modules/contact.js",
   "profile.jpg",
   "profile.png",
   "Shayan-Resume.pdf",
   "vercel.json",
   "README.md",
+  "scripts/squad-check.js",
   "BUILDS.md",
   "AGENTS.md"
 ];

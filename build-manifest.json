@@ -1,6 +1,6 @@
 {
-  "version": "1.0.7",
-  "lastBuildTime": "2026-10-22T23:01:47.180Z",
+  "version": "1.0.8",
+  "lastBuildTime": "2026-10-23T09:56:53.605Z",
   "environment": "Bun 1.4.0",
   "status": "SUCCESS",
   "files": [
@@ -14,11 +14,13 @@
     "js/modules/project-filter.js",
     "js/modules/counters.js",
     "js/modules/navigation.js",
+    "js/modules/contact.js",
     "profile.jpg",
     "profile.png",
     "Shayan-Resume.pdf",
     "vercel.json",
     "README.md",
+    "scripts/squad-check.js",
     "BUILDS.md",
     "AGENTS.md"
   ]

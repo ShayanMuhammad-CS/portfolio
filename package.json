@@ -10,6 +10,7 @@
     "build": "bun run scripts/build.js",
     "build:bump": "bun run scripts/build.js --bump",
     "check": "bun run scripts/build.js",
+    "squad": "bun run scripts/squad-check.js",
     "test": "bun run scripts/test-refactor.js"
   },
   "keywords": [
