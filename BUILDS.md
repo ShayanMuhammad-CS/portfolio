@@ -11,8 +11,8 @@
 
 | Attribute | Current Value |
 | :--- | :--- |
-| **Current Build Version** | `v1.0.9` |
-| **Status** | 🟢 Ultra-Crisp HD Studio Headshot & Geometric Ratio Live |
+| **Current Build Version** | `v1.0.10` |
+| **Status** | 🟢 4 Personal GitHub Repos Linked & Certified Live |
 | **Last Updated** | 2026-10-23 |
 | **Primary Runtime** | Bun 1.4.0 (Windows Native) |
 | **Deployment Target** | Vercel Edge (`vercel.json`) |
@@ -24,6 +24,27 @@
 ---
 
 ## 📋 Build History & Session Log
+
+### [Build v1.0.10] — 4 Authentic Personal GitHub Repos Linked (Skyline Removed)
+* **Date:** 2026-10-23
+* **Author:** 5-a-Side Champions League Agent Squad
+* **Key Achievements:**
+  - **Player 1 (🛡️ Rodri — Architecture & System Engine):** Queried Shayan's live public repositories via GitHub CLI (`ShayanMuhammad-CS`) and isolated 4 premier personal engineering architectures:
+    1. **MeetSense** (`ShayanMuhammad-CS/MeetSense`): Audio/Video Speech-to-Text & Speaker Diarization.
+    2. **Multimodal Neural RAG** (`ShayanMuhammad-CS/Multimodal_RAG_Pipeline`): Vector embeddings + Vision LLMs for chart/PDF intelligence.
+    3. **DocuMind** (`ShayanMuhammad-CS/DOCUMIND-RAG-for-Your-Notes`): Privacy-first local RAG with ChromaDB, Ollama, and Cross-Encoder reranking.
+    4. **Factory Safety Compliance Monitor** (`ShayanMuhammad-CS/factory-compliance-monitor`): Real-time YOLOv8 vision sentinel with LLM policy parsing.
+  - **Player 2 (⚡ Lamine Yamal — UI Prodigy):** Overhauled project cards with Google/Stripe-tier visual polish: distinctive badges (`🎙️ Speech AI`, `🧠 Multimodal RAG`, `⚡ Privacy-First RAG`, `👁️ Computer Vision`), precise performance metrics, and updated tech badges.
+  - **Player 3 (🚀 Kylian Mbappé — UX Striker):** Replaced internal company project (Skyline) from the featured showcase and wired direct one-click GitHub repository links (`target="_blank"` with `rel="noopener noreferrer"`) for maximum recruiter verification.
+  - **Player 4 (🎯 Pedri — QA Playmaker):** Updated `scripts/squad-check.js` to automatically assert all 4 personal GitHub URLs. Verified Category filter counts (2 AI, 1 Backend, 1 Vision) and zero dead links.
+  - **Player 5 (🧤 Thibaut Courtois — Security Guardian):** Verified outbound repository URLs and ensured zero private internal secrets or credentials leak.
+* **Files Modified:**
+  - `index.html`
+  - `scripts/squad-check.js`
+  - `build-manifest.json`
+  - `BUILDS.md`
+
+---
 
 ### [Build v1.0.9] — Ultra-Crisp 1024x1024 Studio Headshot & Geometric Ratio
 * **Date:** 2026-10-23
@@ -275,8 +296,8 @@ When the next chat session opens, the agent should continue directly with these 
    - Completed in Build v1.0.6: Extracted, processed, and deployed transparent circular avatar `profile.png` and `profile.jpg` across Hero Identity Strip and About bio card.
 2. [x] **Contact Engine & Formspree Graceful Routing:**
    - Completed in Build v1.0.8: Client-side validation, loading indicator, async dispatch, and zero-loss WhatsApp / Email fallback routing.
-3. [ ] **Live Project Links & GitHub Repos:**
-   - Ensure the demo links and GitHub links in the Featured Projects section point to Shayan's live repositories.
+3. [x] **Live Project Links & GitHub Repos:**
+   - Completed in Build v1.0.10: Connected Shayan's 4 authentic personal public GitHub repositories (`MeetSense`, `Multimodal_RAG_Pipeline`, `DOCUMIND-RAG-for-Your-Notes`, `factory-compliance-monitor`) and eliminated Skyline.
 4. [ ] **Automated GitHub Actions CI/CD (Optional):**
    - Add a lightweight workflow in `.github/workflows/build.yml` running `bun run build` and `bun run squad` on every push.
 5. [ ] **Lighthouse Performance / SEO Audit:**

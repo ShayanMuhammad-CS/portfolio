@@ -100,7 +100,11 @@ if (existsSync(htmlPath)) {
     { label: "WhatsApp Direct CTA", query: "https://wa.me/" },
     { label: "Direct Email CTA", query: "mailto:shayanmuhammad.cs@gmail.com" },
     { label: "Resume PDF Asset Link", query: "Shayan-Resume.pdf" },
-    { label: "Projects Anchor Link", query: "#projects" }
+    { label: "Projects Anchor Link", query: "#projects" },
+    { label: "MeetSense GitHub Repo", query: "https://github.com/ShayanMuhammad-CS/MeetSense" },
+    { label: "Multimodal RAG GitHub Repo", query: "https://github.com/ShayanMuhammad-CS/Multimodal_RAG_Pipeline" },
+    { label: "DocuMind RAG GitHub Repo", query: "https://github.com/ShayanMuhammad-CS/DOCUMIND-RAG-for-Your-Notes" },
+    { label: "Factory Compliance GitHub Repo", query: "https://github.com/ShayanMuhammad-CS/factory-compliance-monitor" }
   ];
 
   for (const hook of conversionHooks) {

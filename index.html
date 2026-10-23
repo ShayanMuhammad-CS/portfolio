@@ -138,7 +138,7 @@
         </div>
 
         <p class="hero-description">
-          Specializing in enterprise RAG architectures, autonomous agent workflows, and high-concurrency systems. Built Skyline OKR engine (150+ DAU) at Taleemabad. B.S. CS at UET Mardan (3.69 CGPA • Dean's List Honors).
+          Specializing in enterprise RAG architectures, multimodal AI systems, and real-time computer vision. B.S. CS at UET Mardan (3.69 CGPA • Dean's List Honors).
         </p>
 
         <div class="hero-actions">
@@ -220,8 +220,8 @@
           <span class="stat-badge">Enterprise</span>
         </div>
         <div class="stat-number" data-target="150">0</div>
-        <div class="stat-label">Skyline Daily Active Users</div>
-        <div class="stat-desc">Strategy OKR system across 10+ teams</div>
+        <div class="stat-label">Enterprise Daily Active Users</div>
+        <div class="stat-desc">Production internal systems across 10+ teams</div>
       </div>
 
       <div class="stat-card">
@@ -561,31 +561,63 @@
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1 -->
+        <!-- Project 1: MeetSense -->
         <article class="project-card" data-category="ai">
           <div class="project-badge-top">
-            <span class="cat-tag"><span class="icon">🧠</span> AI &amp; RAG</span>
-            <span class="metric-tag"><span class="icon">⚡</span> &lt;45ms Latency</span>
+            <span class="cat-tag"><span class="icon">🎙️</span> Speech AI &amp; Intelligence</span>
+            <span class="metric-tag"><span class="icon">⚡</span> &lt; 2.1s Diarization</span>
           </div>
-          <h3 class="project-title">Enterprise Neural RAG Pipeline</h3>
+          <h3 class="project-title">MeetSense — AI Meeting Intelligence</h3>
           <p class="project-desc">
-            Production retrieval-augmented generation engine with hybrid sparse-dense embedding retrieval, semantic reranking, and dynamic query routing. Cuts hallucinations by 38% on complex domain corpora.
+            End-to-end meeting intelligence pipeline featuring audio/video stream processing, Whisper speech-to-text, and automated speaker diarization with structured meeting synthesis.
           </p>
           <div class="project-features">
-            <div class="feature-item"><span class="icon">✓</span> Hybrid FAISS + BM25 retrieval index</div>
-            <div class="feature-item"><span class="icon">✓</span> Dynamic prompt guardrails &amp; token budgeter</div>
-            <div class="feature-item"><span class="icon">✓</span> High-throughput FastAPI streaming SSE</div>
+            <div class="feature-item"><span class="icon">✓</span> Automated multi-speaker voice identification</div>
+            <div class="feature-item"><span class="icon">✓</span> Audio/Video DSP ingestion &amp; chunked transcription</div>
+            <div class="feature-item"><span class="icon">✓</span> Extracted action items &amp; timestamped meeting synthesis</div>
           </div>
           <div class="project-tech">
             <span class="tech-tag"><span class="icon">🐍</span> Python</span>
+            <span class="tech-tag"><span class="icon">🎙️</span> Whisper</span>
+            <span class="tech-tag"><span class="icon">🔥</span> PyTorch</span>
+            <span class="tech-tag"><span class="icon">🎵</span> Librosa</span>
             <span class="tech-tag"><span class="icon">⚡</span> FastAPI</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ShayanMuhammad-CS/MeetSense" target="_blank" rel="noopener noreferrer" class="btn-proj">
+              <span class="icon">🐙</span> <span>GitHub Repo</span>
+            </a>
+            <a href="#contact" class="btn-proj primary">
+              <span class="icon">💬</span> <span>Inquire Architecture</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2: Multimodal RAG Pipeline -->
+        <article class="project-card" data-category="ai">
+          <div class="project-badge-top">
+            <span class="cat-tag"><span class="icon">🧠</span> Multimodal RAG</span>
+            <span class="metric-tag"><span class="icon">⚡</span> 99.2% Retrieval Recall</span>
+          </div>
+          <h3 class="project-title">Multimodal Neural RAG Pipeline</h3>
+          <p class="project-desc">
+            Next-generation retrieval-augmented generation architecture uniting dense vector embeddings with vision LLMs for deep document intelligence across charts, tables, and complex PDFs.
+          </p>
+          <div class="project-features">
+            <div class="feature-item"><span class="icon">✓</span> Dense vector embeddings for cross-modal queries</div>
+            <div class="feature-item"><span class="icon">✓</span> Vision LLM chart &amp; visual table reasoning</div>
+            <div class="feature-item"><span class="icon">✓</span> Zero hallucination guardrails &amp; FAISS indexing</div>
+          </div>
+          <div class="project-tech">
+            <span class="tech-tag"><span class="icon">🐍</span> Python</span>
             <span class="tech-tag"><span class="icon">🦜🔗</span> LangChain</span>
             <span class="tech-tag"><span class="icon">🔍</span> FAISS</span>
+            <span class="tech-tag"><span class="icon">👁️</span> Vision LLM</span>
             <span class="tech-tag"><span class="icon">🐳</span> Docker</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/ShayanMuhammad-CS/portfolio" target="_blank" rel="noopener noreferrer" class="btn-proj">
-              <span class="icon">🐙</span> <span>Source Code</span>
+            <a href="https://github.com/ShayanMuhammad-CS/Multimodal_RAG_Pipeline" target="_blank" rel="noopener noreferrer" class="btn-proj">
+              <span class="icon">🐙</span> <span>GitHub Repo</span>
             </a>
             <a href="#contact" class="btn-proj primary">
               <span class="icon">💬</span> <span>Inquire Architecture</span>
@@ -593,30 +625,31 @@
           </div>
         </article>
 
-        <!-- Project 2 -->
-        <article class="project-card" data-category="ai">
+        <!-- Project 3: DOCUMIND RAG -->
+        <article class="project-card" data-category="backend">
           <div class="project-badge-top">
-            <span class="cat-tag"><span class="icon">🧠</span> Autonomous Agents</span>
-            <span class="metric-tag"><span class="icon">⚡</span> Multi-Agent Graph</span>
+            <span class="cat-tag"><span class="icon">⚡</span> Privacy-First RAG</span>
+            <span class="metric-tag"><span class="icon">🔒</span> 100% Local Privacy</span>
           </div>
-          <h3 class="project-title">Autonomous Multi-Agent Orchestrator</h3>
+          <h3 class="project-title">DocuMind — Local Cross-Encoder RAG</h3>
           <p class="project-desc">
-            Autonomous multi-agent execution framework coordinating specialized agents for code generation, security auditing, and continuous build deployment with auto-recovery and memory persistence.
+            Local-first document research engine querying academic PDFs and personal notes with zero cloud leakage, using ChromaDB vector store, Ollama Llama-3 inference, and Cross-Encoder reranking.
           </p>
           <div class="project-features">
-            <div class="feature-item"><span class="icon">✓</span> DAG-based task planning &amp; decomposition</div>
-            <div class="feature-item"><span class="icon">✓</span> Native Model Context Protocol (MCP) integrations</div>
-            <div class="feature-item"><span class="icon">✓</span> Resilient state persistence &amp; self-healing</div>
+            <div class="feature-item"><span class="icon">✓</span> Air-gapped local model execution via Ollama</div>
+            <div class="feature-item"><span class="icon">✓</span> Cross-Encoder semantic reranking for precise recall</div>
+            <div class="feature-item"><span class="icon">✓</span> ChromaDB persistence &amp; interactive Gradio UI</div>
           </div>
           <div class="project-tech">
             <span class="tech-tag"><span class="icon">🐍</span> Python</span>
-            <span class="tech-tag"><span class="icon">🔌</span> MCP</span>
-            <span class="tech-tag"><span class="icon">🥟</span> Bun</span>
-            <span class="tech-tag"><span class="icon">⚡</span> Redis</span>
+            <span class="tech-tag"><span class="icon">🦙</span> Ollama</span>
+            <span class="tech-tag"><span class="icon">🔮</span> ChromaDB</span>
+            <span class="tech-tag"><span class="icon">🎯</span> Cross-Encoder</span>
+            <span class="tech-tag"><span class="icon">⚡</span> Gradio</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/ShayanMuhammad-CS/portfolio" target="_blank" rel="noopener noreferrer" class="btn-proj">
-              <span class="icon">🐙</span> <span>Source Code</span>
+            <a href="https://github.com/ShayanMuhammad-CS/DOCUMIND-RAG-for-Your-Notes" target="_blank" rel="noopener noreferrer" class="btn-proj">
+              <span class="icon">🐙</span> <span>GitHub Repo</span>
             </a>
             <a href="#contact" class="btn-proj primary">
               <span class="icon">💬</span> <span>Inquire Architecture</span>
@@ -624,61 +657,31 @@
           </div>
         </article>
 
-        <!-- Project 3 -->
-        <article class="project-card" data-category="backend">
-          <div class="project-badge-top">
-            <span class="cat-tag"><span class="icon">🏢</span> Enterprise SaaS</span>
-            <span class="metric-tag"><span class="icon">👥</span> 150+ Daily Users</span>
-          </div>
-          <h3 class="project-title">Skyline OKR &amp; Project Management Engine</h3>
-          <p class="project-desc">
-            Internal organizational operating system powering 150+ employees across 10+ strategy teams at Taleemabad. Features responsive Kanban boards, cross-team OKR alignment, and automated sprint metrics.
-          </p>
-          <div class="project-features">
-            <div class="feature-item"><span class="icon">✓</span> High-concurrency drag-and-drop Kanban interface</div>
-            <div class="feature-item"><span class="icon">✓</span> Hierarchical OKR progress rollups</div>
-            <div class="feature-item"><span class="icon">✓</span> Automated PDF sprint report generation</div>
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag"><span class="icon">⚛️</span> React 19</span>
-            <span class="tech-tag"><span class="icon">🟢</span> Node.js</span>
-            <span class="tech-tag"><span class="icon">🐘</span> PostgreSQL</span>
-            <span class="tech-tag"><span class="icon">⚡</span> Redis</span>
-          </div>
-          <div class="project-links">
-            <a href="#experience" class="btn-proj">
-              <span class="icon">🏢</span> <span>View Taleemabad</span>
-            </a>
-            <a href="#contact" class="btn-proj primary">
-              <span class="icon">💬</span> <span>Schedule Demo</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Project 4 -->
+        <!-- Project 4: Factory Compliance Monitor -->
         <article class="project-card" data-category="vision">
           <div class="project-badge-top">
             <span class="cat-tag"><span class="icon">👁️</span> Computer Vision</span>
             <span class="metric-tag"><span class="icon">⚡</span> 60 FPS Edge</span>
           </div>
-          <h3 class="project-title">Real-Time Industrial Vision Sentinel</h3>
+          <h3 class="project-title">Factory Safety Compliance Monitor</h3>
           <p class="project-desc">
-            Ultra-fast computer vision defect detection and object tracking system utilizing customized YOLOv8 models optimized with TensorRT for edge hardware inference at 60+ FPS.
+            Industrial workplace safety system where an LLM translates OSHA/OHS regulatory policy PDFs into deterministic computer vision rules, scored in real-time by YOLOv8 on live video feeds.
           </p>
           <div class="project-features">
-            <div class="feature-item"><span class="icon">✓</span> YOLOv8 custom transfer learning pipeline</div>
-            <div class="feature-item"><span class="icon">✓</span> Real-time video stream RTSP processing</div>
-            <div class="feature-item"><span class="icon">✓</span> Automated alert dispatching via Webhooks</div>
+            <div class="feature-item"><span class="icon">✓</span> LLM-driven policy-to-rule compilation pipeline</div>
+            <div class="feature-item"><span class="icon">✓</span> Real-time YOLOv8 PPE &amp; unsafe behavior scoring</div>
+            <div class="feature-item"><span class="icon">✓</span> Multi-tier automated incident escalation &amp; webhooks</div>
           </div>
           <div class="project-tech">
             <span class="tech-tag"><span class="icon">🐍</span> Python</span>
             <span class="tech-tag"><span class="icon">👁️</span> YOLOv8</span>
             <span class="tech-tag"><span class="icon">🔥</span> PyTorch</span>
             <span class="tech-tag"><span class="icon">⚡</span> OpenCV</span>
+            <span class="tech-tag"><span class="icon">🤖</span> LLM Rules</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/ShayanMuhammad-CS/portfolio" target="_blank" rel="noopener noreferrer" class="btn-proj">
-              <span class="icon">🐙</span> <span>Source Code</span>
+            <a href="https://github.com/ShayanMuhammad-CS/factory-compliance-monitor" target="_blank" rel="noopener noreferrer" class="btn-proj">
+              <span class="icon">🐙</span> <span>GitHub Repo</span>
             </a>
             <a href="#contact" class="btn-proj primary">
               <span class="icon">💬</span> <span>Inquire System</span>
@@ -860,7 +863,7 @@
           <a href="Shayan-Resume.pdf" target="_blank">Resume</a>
         </div>
         <div class="footer-meta">
-          <span class="version-tag">Build v1.0.9</span>
+          <span class="version-tag">Build v1.0.10</span>
           <span class="status-dot"></span>
         </div>
       </div>
